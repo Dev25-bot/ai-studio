@@ -1,0 +1,12 @@
+[
+  {
+    "task": "sentiment",
+    "model": "distilbert-base-uncased-finetuned-sst-2-english",
+    "n": 200,
+    "accuracy": 0.91,
+    "macro_f1": 0.9099,
+    "confusion": "['NEGATIVE', 'POSITIVE'] [[87, 14], [4, 95]]",
+    "latency_ms/sample": 9.6,
+    "device": "mps"
+  }
+]

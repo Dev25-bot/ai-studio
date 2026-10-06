@@ -1,0 +1,23 @@
+[
+  {
+    "task": "summarization",
+    "model": "sshleifer/distilbart-cnn-12-6",
+    "n": 20,
+    "rouge1": 36.03,
+    "rouge2": 16.83,
+    "rougeL": 28.27,
+    "len_ratio": 0.1331,
+    "latency_s (median)": 2.023,
+    "device": "mps"
+  },
+  {
+    "task": "next_word",
+    "model": "gpt2",
+    "n": 20,
+    "perplexity": 30.6,
+    "eval_s": 2.61,
+    "first_token_ms": 668.5,
+    "tokens/s": 87.3,
+    "device": "mps"
+  }
+]

@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.claude/
+outputs/*
+!outputs/.gitkeep
+!outputs/bench/
+!outputs/llm_eval/
+.DS_Store

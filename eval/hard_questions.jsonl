@@ -1,0 +1,35 @@
+{"id": "count_r", "cat": "trick", "q": "How many times does the letter 'r' appear in the word 'strawberry'?", "re": "\\b3\\b|three"}
+{"id": "count_e", "cat": "trick", "q": "How many letters 'e' are in the word 'excellence'?", "re": "\\b4\\b|four"}
+{"id": "bat_ball", "cat": "trick", "q": "A bat and a ball cost $1.10 in total. The bat costs $1.00 more than the ball. How much does the ball cost, in cents?", "re": "\\b5\\b|five|0\\.05"}
+{"id": "widgets", "cat": "trick", "q": "If it takes 5 machines 5 minutes to make 5 widgets, how many minutes would it take 100 machines to make 100 widgets?", "re": "\\b5\\b|five"}
+{"id": "lily", "cat": "trick", "q": "A patch of lily pads doubles in size every day. It takes 48 days to cover the whole lake. How many days does it take to cover half the lake?", "re": "\\b47\\b"}
+{"id": "sisters", "cat": "trick", "q": "Sally has 3 brothers. Each of her brothers has 2 sisters. How many sisters does Sally have?", "re": "\\b1\\b|\\bone\\b"}
+{"id": "sheep", "cat": "trick", "q": "A farmer has 17 sheep. All but 9 run away. How many sheep are left?", "re": "\\b9\\b|nine"}
+{"id": "apples", "cat": "trick", "q": "I have 3 apples. I eat 2 bananas. How many apples do I have now?", "re": "\\b3\\b|three"}
+{"id": "decimal", "cat": "trick", "q": "Which number is larger: 9.11 or 9.9?", "re": "9\\.9(?!\\d)|9\\.90"}
+{"id": "syllogism", "cat": "logic", "q": "All bloops are razzies and all razzies are lazzies. Are all bloops definitely lazzies? Answer yes or no.", "re": "\\byes\\b"}
+{"id": "weekday", "cat": "logic", "q": "Today is Wednesday. What day of the week will it be 100 days from today?", "re": "friday"}
+{"id": "train", "cat": "logic", "q": "A train leaves at 14:45 and the journey takes 2 hours 35 minutes. At what time does it arrive? Use 24-hour format.", "re": "17:20"}
+{"id": "sequence", "cat": "logic", "q": "What is the next number in the sequence 2, 6, 12, 20, 30, ...?", "re": "\\b42\\b"}
+{"id": "legs", "cat": "logic", "q": "How many legs do 3 spiders and 2 dogs have in total?", "re": "\\b32\\b"}
+{"id": "arith", "cat": "math", "q": "What is 17 × 23 + 144 ÷ 12?", "re": "\\b403\\b"}
+{"id": "primes", "cat": "math", "q": "What is the sum of all prime numbers less than 30?", "re": "\\b129\\b"}
+{"id": "discount", "cat": "math", "q": "A shirt costs $80 after a 20% discount. What was the original price in dollars?", "re": "\\b100\\b"}
+{"id": "percent", "cat": "math", "q": "What is 15% of 240?", "re": "\\b36\\b"}
+{"id": "sqrt", "cat": "math", "q": "What is the square root of 1764?", "re": "\\b42\\b"}
+{"id": "binary", "cat": "math", "q": "Convert the binary number 101101 to decimal.", "re": "\\b45\\b"}
+{"id": "linear", "cat": "math", "q": "Solve for x: 3x - 7 = 2x + 5", "re": "x\\s*=\\s*12\\b|\\b12\\b"}
+{"id": "integral", "cat": "math", "q": "Compute the definite integral of 2x from x = 0 to x = 3.", "re": "\\b9\\b"}
+{"id": "minutes", "cat": "math", "q": "How many minutes are there in one week?", "re": "10[,\\s]?080"}
+{"id": "py_alias", "cat": "code", "q": "What does this Python code print?\n```python\nx = [1, 2, 3]\ny = x\ny.append(4)\nprint(len(x))\n```", "re": "\\b4\\b"}
+{"id": "py_slice", "cat": "code", "q": "What does this Python code print?\n```python\nprint(sorted([3, 1, 2], reverse=True)[1:])\n```", "re": "\\[2,\\s*1\\]"}
+{"id": "bigo", "cat": "code", "q": "What is the worst-case time complexity of binary search on a sorted array of n elements?", "re": "log"}
+{"id": "write_palin", "cat": "codegen", "q": "Write a Python function is_palindrome(s) that returns True if s is a palindrome, ignoring case and any non-alphanumeric characters. Reply with only the code in one ```python block.", "test": "assert is_palindrome('A man, a plan, a canal: Panama')\nassert not is_palindrome('race a car')\nassert is_palindrome('')\nassert is_palindrome('No lemon, no melon')"}
+{"id": "write_fib", "cat": "codegen", "q": "Write a Python function fib(n) that returns the n-th Fibonacci number, where fib(0) = 0 and fib(1) = 1. It must be fast for n up to 90. Reply with only the code in one ```python block.", "test": "assert fib(0) == 0 and fib(1) == 1 and fib(10) == 55\nassert fib(90) == 2880067194370816120"}
+{"id": "capital", "cat": "facts", "q": "What is the capital of Australia?", "re": "canberra"}
+{"id": "author", "cat": "facts", "q": "Who wrote the novel 'One Hundred Years of Solitude'?", "re": "m[aá]rquez"}
+{"id": "tungsten", "cat": "facts", "q": "What is the chemical symbol for tungsten?", "re": "\\bW\\b", "case": true}
+{"id": "berlin", "cat": "facts", "q": "In what year did the Berlin Wall fall?", "re": "1989"}
+{"id": "translate", "cat": "nlp", "q": "Translate to French: 'The cat is sleeping on the sofa.'", "re_all": ["chat", "dort", "canap|sofa"]}
+{"id": "sentiment", "cat": "nlp", "q": "Classify the sentiment of this review as POSITIVE or NEGATIVE: 'I waited an hour and the food was cold.'", "re": "negative"}
+{"id": "ner", "cat": "nlp", "q": "List every person's name mentioned in: 'Ada Lovelace worked with Charles Babbage on the Analytical Engine in London.'", "re_all": ["lovelace", "babbage"]}

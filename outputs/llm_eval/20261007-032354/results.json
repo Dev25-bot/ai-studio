@@ -1,0 +1,375 @@
+[
+  {
+    "model": "mlx-community/Qwen3-VL-4B-Instruct-4bit",
+    "vision": true,
+    "load_s": 6.1,
+    "accuracy": 0.9714285714285714,
+    "by_category": {
+      "trick": "8/9",
+      "logic": "5/5",
+      "math": "9/9",
+      "code": "3/3",
+      "codegen": "2/2",
+      "facts": "4/4",
+      "nlp": "3/3"
+    },
+    "median_first_token_s": 0.26,
+    "mean_tokens_per_s": 35.6,
+    "median_reply_s": 2.2,
+    "failed": [
+      "sisters"
+    ],
+    "rows": [
+      {
+        "id": "count_r",
+        "cat": "trick",
+        "ok": true,
+        "first_token_s": 1.7786571250035195,
+        "tokens_per_s": 34.193320151034506,
+        "tokens": 88,
+        "elapsed_s": 4.352278708000085,
+        "reply": "Let’s go step by step.\n\nThe word is: **strawberry**\n\nBreak it down letter by letter:\n\ns - t - r - a - w - b - e - r - r - y\n\nNow, count the 'r's:\n\n- Position 3: **r**\n- Position 8: **r**\n- Position 9: **r**\n\nThat’s 3 occurrences.\n\n**Answer: 3**"
+      },
+      {
+        "id": "count_e",
+        "cat": "trick",
+        "ok": true,
+        "first_token_s": 0.24976424999476876,
+        "tokens_per_s": 34.273934904617526,
+        "tokens": 102,
+        "elapsed_s": 3.2258204169920646,
+        "reply": "Let’s count the letters in the word **'excellence'**.\n\nBreak it down letter by letter:\n\ne - x - c - e - l - l - e - n - c - e\n\nNow count the **'e'**s:\n\n1. Position 1: e  \n2. Position 4: e  \n3. Position 7: e  \n4. Position 10: e  \n\nThat’s **4** letters 'e'.\n\n**Answer: 4**"
+      },
+      {
+        "id": "bat_ball",
+        "cat": "trick",
+        "ok": true,
+        "first_token_s": 0.41131554200546816,
+        "tokens_per_s": 34.26984402198945,
+        "tokens": 125,
+        "elapsed_s": 4.058865958999377,
+        "reply": "Let the cost of the ball be **x cents**.  \nThen the bat costs **x + 100 cents** (since it’s $1.00 more, and $1.00 = 100 cents).\n\nTogether, they cost $1.10, which is **110 cents**.\n\nSo:\n\n> x + (x + 100) = 110  \n> 2x + 100 = 110  \n> 2x = 10  \n> x = 5\n\n**Answer: 5**"
+      },
+      {
+        "id": "widgets",
+        "cat": "trick",
+        "ok": true,
+        "first_token_s": 0.4053115419956157,
+        "tokens_per_s": 34.227809079287866,
+        "tokens": 147,
+        "elapsed_s": 4.700092250001035,
+        "reply": "We are told:\n\n> It takes **5 machines** **5 minutes** to make **5 widgets**.\n\nLet’s find the rate:\n\n- 5 machines → 5 widgets in 5 minutes  \n→ So, **1 machine makes 1 widget in 5 minutes** (since 5 machines make 5 widgets → 1 per machine).\n\nSo, **rate = 1 widget per machine per 5 minutes**.\n\nNow, for **100 machines** to make **100 widgets**:\n\n- Since each machine makes 1 widget in 5 minutes, 100 machines can make 100 widgets **in the same 5 minutes**.\n\n**Answer: 5 minutes**"
+      },
+      {
+        "id": "lily",
+        "cat": "trick",
+        "ok": true,
+        "first_token_s": 0.41950283299956936,
+        "tokens_per_s": 34.28370002729118,
+        "tokens": 63,
+        "elapsed_s": 2.257134457991924,
+        "reply": "The lily pads double in size every day, and it takes 48 days to cover the whole lake.\n\nThat means on day 47, the patch was half the size of the lake — because it doubles to cover the whole lake on day 48.\n\n**Answer: 47**"
+      },
+      {
+        "id": "sisters",
+        "cat": "trick",
+        "ok": false,
+        "first_token_s": 0.2681524170038756,
+        "tokens_per_s": 34.553069715384424,
+        "tokens": 59,
+        "elapsed_s": 1.9756752920075087,
+        "reply": "Sally has 2 sisters.\n\n**Explanation**:  \nIf each of Sally’s 3 brothers has 2 sisters, that includes Sally and her other sister. So the 2 sisters are Sally and one other girl. Therefore, Sally has 2 sisters.\n\n**Answer: 2**"
+      },
+      {
+        "id": "sheep",
+        "cat": "trick",
+        "ok": true,
+        "first_token_s": 0.2554997499973979,
+        "tokens_per_s": 34.546473615043304,
+        "tokens": 89,
+        "elapsed_s": 2.831782541004941,
+        "reply": "This is a classic riddle.\n\n“**All but 9 run away**” means that **9 sheep remain** — not that 9 ran away, but that *all except 9* ran away.\n\nSo, if 17 sheep were there, and all but 9 (i.e., 17 - 9 = 8) ran away, then **9 are left**.\n\n**Answer: 9**"
+      },
+      {
+        "id": "apples",
+        "cat": "trick",
+        "ok": true,
+        "first_token_s": 0.25048195899580605,
+        "tokens_per_s": 34.559558844288425,
+        "tokens": 55,
+        "elapsed_s": 1.841964374994859,
+        "reply": "You still have 3 apples.\n\nEating bananas doesn’t affect the number of apples you have — unless you’re implying you ate a banana *instead* of an apple, which isn’t stated. So no change to the apple count.\n\n**Answer: 3**"
+      },
+      {
+        "id": "decimal",
+        "cat": "trick",
+        "ok": true,
+        "first_token_s": 0.26815520800300874,
+        "tokens_per_s": 34.53238392019971,
+        "tokens": 91,
+        "elapsed_s": 2.903366124999593,
+        "reply": "9.9 is larger than 9.11.\n\nWhen comparing decimal numbers, start from the leftmost digit and move right:\n\n- Both have 9 in the units place.\n- Compare the tenths place: 1 (in 9.11) vs 9 (in 9.9) → 9 is larger.\n\nSo, **9.9** is the larger number.\n\n**Answer: 9.9**"
+      },
+      {
+        "id": "syllogism",
+        "cat": "logic",
+        "ok": true,
+        "first_token_s": 0.4294640840089414,
+        "tokens_per_s": 35.367180937841965,
+        "tokens": 36,
+        "elapsed_s": 1.4473682500101859,
+        "reply": "Yes.  \nSince all bloops are razzies, and all razzies are lazzies, then by transitivity, all bloops are lazzies."
+      },
+      {
+        "id": "weekday",
+        "cat": "logic",
+        "ok": true,
+        "first_token_s": 0.2502168749924749,
+        "tokens_per_s": 34.61704446722419,
+        "tokens": 79,
+        "elapsed_s": 2.5323588750034105,
+        "reply": "To find the day of the week 100 days from Wednesday, divide 100 by 7 (since there are 7 days in a week):\n\n100 ÷ 7 = 14 weeks and 2 days remainder.\n\nSo, 100 days from today is **2 days after Wednesday** → **Friday**.\n\n**Answer: Friday**"
+      },
+      {
+        "id": "train",
+        "cat": "logic",
+        "ok": true,
+        "first_token_s": 0.40703054099867586,
+        "tokens_per_s": 34.63463139659724,
+        "tokens": 72,
+        "elapsed_s": 2.4858958330005407,
+        "reply": "Start time: 14:45  \nJourney duration: 2 hours 35 minutes\n\nAdd 2 hours to 14:45 → 16:45  \nAdd 35 minutes to 16:45 → 17:20\n\n**Answer: 17:20**"
+      },
+      {
+        "id": "sequence",
+        "cat": "logic",
+        "ok": true,
+        "first_token_s": 0.5033584589982638,
+        "tokens_per_s": 34.306379792811846,
+        "tokens": 147,
+        "elapsed_s": 4.788326416994096,
+        "reply": "The sequence is:  \n**2, 6, 12, 20, 30, ...**\n\nLet’s look at the differences between consecutive terms:\n\n- 6 - 2 = **4**\n- 12 - 6 = **6**\n- 20 - 12 = **8**\n- 30 - 20 = **10**\n\nSo the differences are: **4, 6, 8, 10** — increasing by 2 each time.\n\nNext difference should be **12**, so:\n\n**30 + 12 = 42**\n\n✅ The next number is **42**.\n\n**Answer: 42**"
+      },
+      {
+        "id": "legs",
+        "cat": "logic",
+        "ok": true,
+        "first_token_s": 0.25109816700569354,
+        "tokens_per_s": 34.66861658451568,
+        "tokens": 61,
+        "elapsed_s": 2.01063425000757,
+        "reply": "Spiders have 8 legs each, dogs have 4 legs each.\n\n- 3 spiders: 3 × 8 = 24 legs  \n- 2 dogs: 2 × 4 = 8 legs  \n\nTotal: 24 + 8 = **32 legs**"
+      },
+      {
+        "id": "arith",
+        "cat": "math",
+        "ok": true,
+        "first_token_s": 0.25252091699803714,
+        "tokens_per_s": 34.58104256451339,
+        "tokens": 88,
+        "elapsed_s": 2.7972951249976177,
+        "reply": "First, follow the order of operations (PEMDAS/BODMAS):\n\n1. **Multiplication**:  \n   17 × 23 = 391\n\n2. **Division**:  \n   144 ÷ 12 = 12\n\n3. **Addition**:  \n   391 + 12 = 403\n\n**Answer: 403**"
+      },
+      {
+        "id": "primes",
+        "cat": "math",
+        "ok": true,
+        "first_token_s": 0.24595654199947603,
+        "tokens_per_s": 34.142329403827425,
+        "tokens": 155,
+        "elapsed_s": 4.785806917003356,
+        "reply": "The prime numbers less than 30 are:\n\n**2, 3, 5, 7, 11, 13, 17, 19, 23, 29**\n\nNow sum them:\n\n2 + 3 = 5  \n5 + 5 = 10  \n10 + 7 = 17  \n17 + 11 = 28  \n28 + 13 = 41  \n41 + 17 = 58  \n58 + 19 = 77  \n77 + 23 = 100  \n100 + 29 = **129**\n\n**Answer: 129**"
+      },
+      {
+        "id": "discount",
+        "cat": "math",
+        "ok": true,
+        "first_token_s": 0.2612131250061793,
+        "tokens_per_s": 34.64010420192528,
+        "tokens": 80,
+        "elapsed_s": 2.570704500001739,
+        "reply": "Let the original price be $ x $.\n\nAfter a 20% discount, the customer pays 80% of the original price:\n\n$$\n0.8x = 80\n$$\n\nSolve for $ x $:\n\n$$\nx = \\frac{80}{0.8} = 100\n$$\n\n**Answer: 100**"
+      },
+      {
+        "id": "percent",
+        "cat": "math",
+        "ok": true,
+        "first_token_s": 0.36514458298915997,
+        "tokens_per_s": 34.883859902077695,
+        "tokens": 54,
+        "elapsed_s": 1.9131546659918968,
+        "reply": "To find 15% of 240:\n\n15% = 15 ÷ 100 = 0.15  \n0.15 × 240 = 36\n\n**Answer: 36**"
+      },
+      {
+        "id": "sqrt",
+        "cat": "math",
+        "ok": true,
+        "first_token_s": 0.2461358750006184,
+        "tokens_per_s": 35.47722277517354,
+        "tokens": 34,
+        "elapsed_s": 1.2045154169900343,
+        "reply": "The square root of 1764 is **42**.\n\nYou can verify:  \n42 × 42 = 1764."
+      },
+      {
+        "id": "binary",
+        "cat": "math",
+        "ok": true,
+        "first_token_s": 0.25037591699219774,
+        "tokens_per_s": 34.094432081940596,
+        "tokens": 188,
+        "elapsed_s": 5.764517999996315,
+        "reply": "To convert the binary number **101101** to decimal, we use positional notation (powers of 2):\n\nStarting from the right (least significant bit), each digit represents:\n\n```\n101101\n^ ^ ^ ^ ^ ^\n2^5 2^4 2^3 2^2 2^1 2^0\n```\n\nNow compute:\n\n- 1 × 2⁵ = 32  \n- 0 × 2⁴ = 0  \n- 1 × 2³ = 8  \n- 1 × 2² = 4  \n- 0 × 2¹ = 0  \n- 1 × 2⁰ = 1  \n\nAdd them:  \n**32 + 0 + 8 + 4 + 0 + 1 = 45**\n\n**Answer: 45**"
+      },
+      {
+        "id": "linear",
+        "cat": "math",
+        "ok": true,
+        "first_token_s": 0.26010429199959617,
+        "tokens_per_s": 35.14062228664249,
+        "tokens": 42,
+        "elapsed_s": 1.4553007499926025,
+        "reply": "Subtract 2x from both sides:  \n→ x - 7 = 5  \n\nAdd 7 to both sides:  \n→ x = 12  \n\n**Answer: 12**"
+      },
+      {
+        "id": "integral",
+        "cat": "math",
+        "ok": true,
+        "first_token_s": 0.2788242079986958,
+        "tokens_per_s": 33.59064910971492,
+        "tokens": 108,
+        "elapsed_s": 3.494039083001553,
+        "reply": "We are to compute the definite integral:\n\n$$\n\\int_0^3 2x \\, dx\n$$\n\n### Step 1: Find the antiderivative\nThe antiderivative of $2x$ is:\n\n$$\nx^2\n$$\n\n### Step 2: Apply the limits\n\n$$\n\\left. x^2 \\right|_0^3 = 3^2 - 0^2 = 9 - 0 = 9\n$$\n\n**Answer: 9**"
+      },
+      {
+        "id": "minutes",
+        "cat": "math",
+        "ok": true,
+        "first_token_s": 0.2594560419966001,
+        "tokens_per_s": 35.65529108157129,
+        "tokens": 25,
+        "elapsed_s": 0.9605741669947747,
+        "reply": "There are 10,080 minutes in one week.\n\n**Answer: 10080**"
+      },
+      {
+        "id": "py_alias",
+        "cat": "code",
+        "ok": true,
+        "first_token_s": 0.4175139580038376,
+        "tokens_per_s": 34.55146923118851,
+        "tokens": 72,
+        "elapsed_s": 2.5013840409956174,
+        "reply": "The code prints `4`.\n\nExplanation:  \n`y = x` creates a reference to the same list object. When `y.append(4)` is called, it modifies the original list `x` because both variables point to the same object in memory. Hence, `len(x)` becomes 4 after the append.\n\n**Answer: 4**"
+      },
+      {
+        "id": "py_slice",
+        "cat": "code",
+        "ok": true,
+        "first_token_s": 0.25175295799272135,
+        "tokens_per_s": 34.60085613296638,
+        "tokens": 68,
+        "elapsed_s": 2.2170513330056565,
+        "reply": "The code sorts the list `[3, 1, 2]` in descending order (reverse=True), then slices off the first element.\n\nSorted descending: `[3, 2, 1]`  \nSliced from index 1 onward: `[2, 1]`\n\n**Answer: [2, 1]**"
+      },
+      {
+        "id": "bigo",
+        "cat": "code",
+        "ok": true,
+        "first_token_s": 0.25266883299627807,
+        "tokens_per_s": 34.630063946779586,
+        "tokens": 71,
+        "elapsed_s": 2.302932624996174,
+        "reply": "The worst-case time complexity of binary search on a sorted array of *n* elements is **O(log n)**.\n\nThis occurs because binary search repeatedly divides the search space in half, leading to at most *log₂(n)* comparisons in the worst case (when the target is at one end or not present).\n\n**Answer: O(log n)**"
+      },
+      {
+        "id": "write_palin",
+        "cat": "codegen",
+        "ok": true,
+        "first_token_s": 0.42288795800413936,
+        "tokens_per_s": 34.6515881212611,
+        "tokens": 58,
+        "elapsed_s": 2.096711000005598,
+        "reply": "```python\ndef is_palindrome(s):\n    # Keep only alphanumeric characters and convert to lowercase\n    cleaned = ''.join(char.lower() for char in s if char.isalnum())\n    # Check if the cleaned string equals its reverse\n    return cleaned == cleaned[::-1]\n```"
+      },
+      {
+        "id": "write_fib",
+        "cat": "codegen",
+        "ok": true,
+        "first_token_s": 0.41452549998939503,
+        "tokens_per_s": 34.11112643110888,
+        "tokens": 59,
+        "elapsed_s": 2.1441889999987325,
+        "reply": "```python\ndef fib(n):\n    if n < 2:\n        return n\n    a, b = 0, 1\n    for _ in range(2, n + 1):\n        a, b = b, a + b\n    return b\n```"
+      },
+      {
+        "id": "capital",
+        "cat": "facts",
+        "ok": true,
+        "first_token_s": 0.23600874999829102,
+        "tokens_per_s": 37.29439674463459,
+        "tokens": 13,
+        "elapsed_s": 0.5845920840074541,
+        "reply": "The capital of Australia is Canberra.\n\n**Answer: Canberra**"
+      },
+      {
+        "id": "author",
+        "cat": "facts",
+        "ok": true,
+        "first_token_s": 0.255617999995593,
+        "tokens_per_s": 38.21954874423279,
+        "tokens": 10,
+        "elapsed_s": 0.5172760410059709,
+        "reply": "**Answer: Gabriel García Márquez**"
+      },
+      {
+        "id": "tungsten",
+        "cat": "facts",
+        "ok": true,
+        "first_token_s": 0.2459860840026522,
+        "tokens_per_s": 45.88469307370736,
+        "tokens": 4,
+        "elapsed_s": 0.33317212499969173,
+        "reply": "**W**"
+      },
+      {
+        "id": "berlin",
+        "cat": "facts",
+        "ok": true,
+        "first_token_s": 0.2402671250019921,
+        "tokens_per_s": 38.11244909587223,
+        "tokens": 10,
+        "elapsed_s": 0.5026571660127956,
+        "reply": "**Answer: 1989**"
+      },
+      {
+        "id": "translate",
+        "cat": "nlp",
+        "ok": true,
+        "first_token_s": 0.2511052500049118,
+        "tokens_per_s": 38.30382364715926,
+        "tokens": 10,
+        "elapsed_s": 0.5121690829982981,
+        "reply": "Le chat dort sur le canapé."
+      },
+      {
+        "id": "sentiment",
+        "cat": "nlp",
+        "ok": true,
+        "first_token_s": 0.25434191699605435,
+        "tokens_per_s": 42.90660792478877,
+        "tokens": 5,
+        "elapsed_s": 0.3708824579953216,
+        "reply": "**NEGATIVE**"
+      },
+      {
+        "id": "ner",
+        "cat": "nlp",
+        "ok": true,
+        "first_token_s": 0.25403404199460056,
+        "tokens_per_s": 36.334062036795636,
+        "tokens": 19,
+        "elapsed_s": 0.7769229590048781,
+        "reply": "**Ada Lovelace** and **Charles Babbage** are the two people mentioned."
+      }
+    ]
+  }
+]

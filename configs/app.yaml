@@ -1,0 +1,118 @@
+# Multi-Task AI Studio configuration.
+# Toggle tabs with `enabled`, swap checkpoints with `model`, and switch inference
+# backends with `backend: hf | local | remote`.
+
+app:
+  title: "AI Studio"
+  description: "One private assistant for questions, code, documents, images and drawing — running locally on your Mac."
+  host: "127.0.0.1"
+  port: 7860
+  share: false
+  theme: "soft"            # soft | default | monochrome | glass
+  seed: 42
+  outputs_dir: "outputs"
+
+runtime:
+  device: "auto"           # auto | cuda | mps | cpu
+  amp: true                # autocast on CUDA; fp16 diffusion on CUDA/MPS
+  max_loaded_models: 3     # LRU cap — keeps memory bounded on 8 GB machines
+  warmup: []               # task names to preload at startup, e.g. [sentiment]
+
+limits:
+  max_input_chars: 16000   # long pastes (articles, logs) are fine; matches chat.max_document_chars
+  max_prompt_chars: 400
+  rate_limit_per_minute: 30  # per client; 0 disables
+
+logging:
+  level: "INFO"
+  json_log_file: "outputs/logs/app.jsonl"
+  log_payloads: true       # include (truncated) inputs/outputs in logs
+  wandb: false             # set true + WANDB_API_KEY to log runs to Weights & Biases
+
+remote:
+  # Used by any task with backend: remote. OpenAI-compatible chat completions API.
+  base_url: "https://api.openai.com/v1"
+  api_key_env: "OPENAI_API_KEY"
+  model: "gpt-4o-mini"
+
+chat:
+  # The single chat model behind the app. Picked with `python -m eval.llm_eval` on
+  # eval/hard_questions.jsonl: Qwen3-VL-4B scored 34/35 (97%), reads images, ~34 tok/s on an M2.
+  model: "mlx-community/Qwen3-VL-4B-Instruct-4bit"
+  vision: true
+  max_tokens: 1536
+  temperature: 0.3
+  context_tokens: 6144
+  keepalive_s: 15             # re-touch the weights while idle so macOS doesn't swap them out (0 = off)
+  max_document_chars: 16000   # attached files are truncated beyond this
+  max_image_side: 1024        # uploaded images are downscaled to keep vision prefill fast
+
+# Task definitions below power `python -m eval.bench`; the chat UI uses only image_gen (for "draw ..." requests).
+tasks:
+  image_gen:
+    enabled: true
+    label: "🎨 Image"
+    backend: hf
+    model: "stabilityai/sd-turbo"
+    alternatives: ["runwayml/stable-diffusion-v1-5", "stabilityai/stable-diffusion-xl-base-1.0"]
+    params: { steps: 2, guidance_scale: 0.0, width: 512, height: 512 }
+
+  summarization:
+    enabled: true
+    label: "📝 Summarize"
+    backend: hf
+    model: "sshleifer/distilbart-cnn-12-6"
+    alternatives: ["facebook/bart-large-cnn", "google/flan-t5-base"]
+    params: { max_new_tokens: 130, min_new_tokens: 30, num_beams: 4 }
+
+  sentiment:
+    enabled: true
+    label: "💬 Sentiment"
+    backend: hf
+    model: "distilbert-base-uncased-finetuned-sst-2-english"
+    alternatives: []
+    params: {}
+
+  next_word:
+    enabled: true
+    label: "⌨️ Next Word"
+    backend: hf
+    model: "gpt2"
+    alternatives: ["gpt2-medium", "distilgpt2"]
+    params: { max_new_tokens: 40, temperature: 0.8, top_k: 50, top_p: 0.95 }
+
+  translation:
+    enabled: true
+    label: "🌍 Translate"
+    backend: hf
+    model: "Helsinki-NLP/opus-mt-en-de"
+    alternatives: ["Helsinki-NLP/opus-mt-en-fr", "Helsinki-NLP/opus-mt-de-en"]
+    params: { max_new_tokens: 256 }
+
+  ner:
+    enabled: true
+    label: "🏷️ Entities"
+    backend: hf
+    model: "dslim/bert-base-NER"
+    alternatives: []
+    params: {}
+
+  qa:
+    enabled: true
+    label: "❓ Q&A"
+    backend: hf
+    model: "deepset/roberta-base-squad2"
+    alternatives: []
+    params: {}
+
+  image_classify:
+    enabled: true
+    label: "🖼️ Classify"
+    backend: hf
+    model: "google/vit-base-patch16-224"
+    alternatives: ["apple/mobilevit-small", "microsoft/resnet-50"]
+    params: { top_k: 5 }
+
+eval:
+  clip_model: "openai/clip-vit-base-patch32"
+  bench_limit: 20          # max samples per task in benchmark mode

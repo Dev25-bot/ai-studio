@@ -1,0 +1,376 @@
+[
+  {
+    "model": "mlx-community/Qwen3-4B-Instruct-2507-4bit",
+    "vision": false,
+    "load_s": 6.6,
+    "accuracy": 0.9428571428571428,
+    "by_category": {
+      "trick": "8/9",
+      "logic": "5/5",
+      "math": "9/9",
+      "code": "3/3",
+      "codegen": "2/2",
+      "facts": "4/4",
+      "nlp": "2/3"
+    },
+    "median_first_token_s": 1.12,
+    "mean_tokens_per_s": 35.0,
+    "median_reply_s": 3.8,
+    "failed": [
+      "sisters",
+      "translate"
+    ],
+    "rows": [
+      {
+        "id": "count_r",
+        "cat": "trick",
+        "ok": true,
+        "first_token_s": 3.200324166988139,
+        "tokens_per_s": 34.01942191165739,
+        "tokens": 125,
+        "elapsed_s": 6.873110124986852,
+        "reply": "Let's break down the word: **strawberry**\n\nStep-by-step:\n\n1. Write out the letters:  \n   s, t, r, a, w, b, e, r, r, y\n\n2. Now count how many times the letter **'r'** appears:\n\n- Position 3: 'r' → first 'r'\n- Position 8: 'r' → second 'r'\n- Position 9: 'r' → third 'r'\n\nSo, the letter 'r' appears **three times**.\n\nAnswer: 3  \n**Answer: 3**"
+      },
+      {
+        "id": "count_e",
+        "cat": "trick",
+        "ok": true,
+        "first_token_s": 1.1074463330005528,
+        "tokens_per_s": 34.61811566665914,
+        "tokens": 162,
+        "elapsed_s": 5.7870626660005655,
+        "reply": "Let's count the number of letters 'e' in the word **'excellence'**.\n\nStep-by-step:\n\n1. Write out the word: **e x c e l l e n c e**\n\n2. Go through each letter:\n   - e → yes (1)\n   - x → no\n   - c → no\n   - e → yes (2)\n   - l → no\n   - l → no\n   - e → yes (3)\n   - n → no\n   - c → no\n   - e → yes (4)\n\nSo, the letters 'e' appear at positions: 1st, 4th, 7th, and 10th.\n\nThat's **4** letters 'e'.\n\nAnswer: 4"
+      },
+      {
+        "id": "bat_ball",
+        "cat": "trick",
+        "ok": true,
+        "first_token_s": 1.1396475420042407,
+        "tokens_per_s": 34.2615435409025,
+        "tokens": 187,
+        "elapsed_s": 6.597361334002926,
+        "reply": "Let's solve this step by step.\n\nWe are told:\n\n- The bat and the ball together cost $1.10.\n- The bat costs $1.00 more than the ball.\n\nLet the cost of the **ball** be $ x $ dollars.\n\nThen the cost of the **bat** is $ x + 1.00 $ dollars.\n\nTogether, they cost:\n\n$$\nx + (x + 1.00) = 1.10\n$$\n\nSimplify:\n\n$$\n2x + 1.00 = 1.10\n$$\n\nSubtract 1.00 from both sides:\n\n$$\n2x = 0.10\n$$\n\nDivide by 2:\n\n$$\nx = 0.05\n$$\n\nSo the ball costs $0.05, which is **5 cents**.\n\nAnswer: 5"
+      },
+      {
+        "id": "widgets",
+        "cat": "trick",
+        "ok": true,
+        "first_token_s": 1.1348212090088055,
+        "tokens_per_s": 34.226610270355664,
+        "tokens": 196,
+        "elapsed_s": 6.8610582090041135,
+        "reply": "We are given:\n\n- 5 machines make 5 widgets in 5 minutes.\n\nFirst, let's determine the rate at which machines produce widgets.\n\n### Step 1: Find the rate per machine\n5 machines → 5 widgets in 5 minutes  \nSo, each machine makes 1 widget in 5 minutes.\n\n(5 widgets / 5 machines = 1 widget per machine in 5 minutes)\n\nSo, **each machine produces 1 widget every 5 minutes**.\n\n### Step 2: How long for 100 machines to make 100 widgets?\n\nIf each machine takes 5 minutes to make one widget, then:\n\n- 100 machines can produce 100 widgets **in parallel**, one per machine.\n\nSo, each machine makes one widget in 5 minutes → all 100 machines can make 100 widgets in **5 minutes**.\n\n### Final Answer:\n**Answer: 5**"
+      },
+      {
+        "id": "lily",
+        "cat": "trick",
+        "ok": true,
+        "first_token_s": 1.1370374170073774,
+        "tokens_per_s": 34.10295512802806,
+        "tokens": 82,
+        "elapsed_s": 3.54149541699735,
+        "reply": "The lily pads double in size every day. If it takes 48 days to cover the entire lake, then one day before that — on day 47 — the lake would be half covered.\n\nThis is because on day 48, the patch is fully covered, and since it doubles each day, the day before must have been half the size.\n\n**Answer: 47**"
+      },
+      {
+        "id": "sisters",
+        "cat": "trick",
+        "ok": false,
+        "first_token_s": 1.116522124997573,
+        "tokens_per_s": 34.358605751126476,
+        "tokens": 230,
+        "elapsed_s": 7.8105766249937005,
+        "reply": "Sally has 3 brothers.\n\nEach of her brothers has 2 sisters.\n\nSince Sally is one of the sisters, and all her brothers share the same set of sisters, that means the group of sisters includes Sally and her siblings.\n\nSo, if each brother has 2 sisters, then there are 2 sisters per brother — and Sally is one of them.\n\nTherefore, Sally has **2 sisters**.\n\nBut wait: the question is: *How many sisters does Sally have?*\n\nSally has 2 sisters — the other girls in the family.\n\nBut note: Sally is also a sister to her brothers. So total sisters in the family = Sally + 2 others = 3 girls.\n\nBut the question is: *How many sisters does Sally have?* — meaning, how many female siblings does Sally have besides herself?\n\nSo, if the brothers have 2 sisters, and Sally is one of them, then the total number of sisters (in the family) is 3: Sally and her two sisters.\n\nSo Sally has **2 sisters** (the other girls).\n\nAnswer: 2\n\n**Answer: 2**"
+      },
+      {
+        "id": "sheep",
+        "cat": "trick",
+        "ok": true,
+        "first_token_s": 1.1105328330013435,
+        "tokens_per_s": 34.804933347106605,
+        "tokens": 43,
+        "elapsed_s": 2.3459590829879744,
+        "reply": "The phrase \"All but 9 run away\" means that 9 sheep do **not** run away.\n\nSo, out of 17 sheep, only 9 remain.\n\n**Answer: 9**"
+      },
+      {
+        "id": "apples",
+        "cat": "trick",
+        "ok": true,
+        "first_token_s": 1.1177432499971474,
+        "tokens_per_s": 34.118297216079924,
+        "tokens": 31,
+        "elapsed_s": 2.026318791002268,
+        "reply": "You start with 3 apples. Eating bananas does not affect the number of apples.\n\nSo, you still have 3 apples.\n\nAnswer: 3"
+      },
+      {
+        "id": "decimal",
+        "cat": "trick",
+        "ok": true,
+        "first_token_s": 1.1122377499996219,
+        "tokens_per_s": 34.44895188804549,
+        "tokens": 121,
+        "elapsed_s": 4.6245133750053355,
+        "reply": "We compare the two numbers:  \n- 9.11 and 9.9  \n\nBoth start with 9, so we look at the next digit:  \n- 9.11 has 1 in the tenths place  \n- 9.9 has 9 in the tenths place  \n\nSince 9 > 1, 9.9 is larger than .11.\n\nEven though 9.9 looks smaller in writing, it's actually 9.90, which is greater than 9.11.\n\n**Answer: 9.9**"
+      },
+      {
+        "id": "syllogism",
+        "cat": "logic",
+        "ok": true,
+        "first_token_s": 1.1337960000091698,
+        "tokens_per_s": 34.97334011939834,
+        "tokens": 79,
+        "elapsed_s": 3.392403625010047,
+        "reply": "Yes.\n\nExplanation:  \n- All bloops are razzies.  \n- All razzies are lazzies.  \n\nBy transitive reasoning:  \nIf every bloop is a razzie, and every razzie is a lazey, then every bloop must be a lazey.  \n\nSo, all bloops are lazzies.\n\nAnswer: yes"
+      },
+      {
+        "id": "weekday",
+        "cat": "logic",
+        "ok": true,
+        "first_token_s": 1.1306482079962734,
+        "tokens_per_s": 34.47567771457012,
+        "tokens": 181,
+        "elapsed_s": 6.380707832999178,
+        "reply": "We are given that today is **Wednesday**, and we want to find the day of the week **100 days from today**.\n\n### Step 1: Understand the cycle\nThe days of the week repeat every 7 days. So, we can find the remainder when 100 is divided by 7.\n\n$$\n100 \\div 7 = 14 \\text{ remainder } 2\n$$\n\nBecause:\n$$\n7 \\times 14 = 98 \\\\\n100 - 98 = 2\n$$\n\nSo, 100 days is **2 days more than a multiple of 7**.\n\n### Step 2: Add 2 days to Wednesday\n- Wednesday + 1 day = Thursday  \n- Wednesday + 2 days = **Friday**\n\n### ✅ Answer:\n**Friday**  \n\nAnswer: Friday"
+      },
+      {
+        "id": "train",
+        "cat": "logic",
+        "ok": true,
+        "first_token_s": 1.1227405829995405,
+        "tokens_per_s": 34.82309747871399,
+        "tokens": 122,
+        "elapsed_s": 4.625978333002422,
+        "reply": "We are given:\n\n- Departure time: 14:45  \n- Journey duration: 2 hours 35 minutes  \n\nWe need to add 2 hours 35 minutes to 14:45.\n\n### Step-by-step addition:\n\nStart with 14:45  \nAdd 2 hours → 14:45 + 2 hours = 16:45  \nAdd 35 minutes → 16:45 + 35 minutes = 17:20\n\n### Final Answer:\n**17:20**"
+      },
+      {
+        "id": "sequence",
+        "cat": "logic",
+        "ok": true,
+        "first_token_s": 1.1196586250007385,
+        "tokens_per_s": 34.29277563008263,
+        "tokens": 294,
+        "elapsed_s": 9.692864833996282,
+        "reply": "Let's examine the sequence:  \n2, 6, 12, 20, 30, ...\n\nLook at the differences between consecutive terms:\n\n- 6 - 2 = 4  \n- 12 - 6 = 6  \n- 20 - 12 = 8  \n- 30 -  20 = 10  \n\nThe differences are: 4, 6, 8, 10 → increasing by 2 each time.\n\nSo the next difference should be 12.\n\nAdd 12 to the last term:  \n30 + 12 = 42\n\nNow, let's see if there's a pattern in the original terms:\n\n2 = 1×2  \n6 = 2×3  \n12 = 3×4  \n20 = 4×5  \n30 = 5×6  \n\nAh! So the pattern is:  \nn × (n+1) for n starting at 1.\n\nSo:\n- 1×2 = 2  \n- 2×3 = 6  \n- 3×4 = 12  \n- 4×5 = 20  \n- 5×6 = 30  \n- 6×7 = 42  \n\nYes! So the next term is 6×7 = 42.\n\n**Answer: 42**"
+      },
+      {
+        "id": "legs",
+        "cat": "logic",
+        "ok": true,
+        "first_token_s": 1.1068720830080565,
+        "tokens_per_s": 35.07000785831389,
+        "tokens": 68,
+        "elapsed_s": 3.0457953750010347,
+        "reply": "Spiders have 8 legs each.  \nDogs have 4 legs each.\n\nSo:\n- 3 spiders × 8 legs = 24 legs  \n- 2 dogs × 4 legs = 8 legs  \n\nTotal legs = 24 + 8 = 32\n\n**Answer: 32**"
+      },
+      {
+        "id": "arith",
+        "cat": "math",
+        "ok": true,
+        "first_token_s": 1.1274992090038722,
+        "tokens_per_s": 34.85598851266538,
+        "tokens": 79,
+        "elapsed_s": 3.3939517499966314,
+        "reply": "First, perform the multiplication and division according to order of operations (PEMDAS):\n\n1. Multiply:  \n17 × 23 = 391\n\n2. Divide:  \n144 ÷ 12 = 12\n\n3. Add the results:  \n391 + 12 = 403\n\nAnswer: 403"
+      },
+      {
+        "id": "primes",
+        "cat": "math",
+        "ok": true,
+        "first_token_s": 1.1112517080036923,
+        "tokens_per_s": 34.02386821612344,
+        "tokens": 180,
+        "elapsed_s": 6.40164233300311,
+        "reply": "To find the sum of all prime numbers less than 30, we first list all prime numbers less than 30.\n\nPrimes less than 30 are:\n2, 3, 5, 7, 11, 13, 17, 19, 23, 29\n\nNow, add them:\n\n2 + 3 = 5  \n5 + 5 = 10  \n10 + 7 = 17  \n17 + 11 = 28  \n28 + 13 = 41  \n41 + 17 = 58  \n58 + 19 = 77  \n77 + 23 = 100  \n100 + 29 = 129\n\n**Answer: 129**"
+      },
+      {
+        "id": "discount",
+        "cat": "math",
+        "ok": true,
+        "first_token_s": 1.113022000005003,
+        "tokens_per_s": 34.25456521691814,
+        "tokens": 117,
+        "elapsed_s": 4.528619834003621,
+        "reply": "We are told that a shirt costs $80 **after** a 20% discount.\n\nThis means the $80 is 80% of the original price (since a 20% discount leaves 80% of the original price).\n\nLet the original price be $ x $.\n\nThen:\n\n$$\n0.80x = 80\n$$\n\nSolve for $ x $:\n\n$$\nx = \\frac{80}{0.80} = 100\n$$\n\n**Answer: 100**"
+      },
+      {
+        "id": "percent",
+        "cat": "math",
+        "ok": true,
+        "first_token_s": 1.118296917004045,
+        "tokens_per_s": 33.745653654512736,
+        "tokens": 70,
+        "elapsed_s": 3.192449750000378,
+        "reply": "To find 15% of 240:\n\nFirst, convert 15% to a decimal:  \n15% = 15 ÷ 100 = 0.15\n\nNow multiply:  \n0.15 × 240 = 36\n\n**Answer: 36**"
+      },
+      {
+        "id": "sqrt",
+        "cat": "math",
+        "ok": true,
+        "first_token_s": 1.110781458002748,
+        "tokens_per_s": 34.70110281766127,
+        "tokens": 167,
+        "elapsed_s": 5.923307375007425,
+        "reply": "We are asked to find the square root of 1764.\n\nLet’s compute it step by step:\n\nTry to factor 1764:\n\n- 1764 is even → divide by 2: 1764 ÷ 2 = 882  \n- 882 ÷ 2 = 441  \n- 441 is 21² (since 21 × 21 = 441)\n\nSo:\n1764 = 2 × 2 × 441 = 2² × 21²\n\nTherefore:\n√1764 = √(2² × 21²) = 2 × 21 = 42\n\n**Answer: 42**"
+      },
+      {
+        "id": "binary",
+        "cat": "math",
+        "ok": true,
+        "first_token_s": 1.119731792001403,
+        "tokens_per_s": 34.199496198667475,
+        "tokens": 228,
+        "elapsed_s": 7.785963542002719,
+        "reply": "To convert the binary number `101101` to decimal, we evaluate each digit based on its position (powers of 2, starting from the right at position 0):\n\nBinary: `1 0 1 1 0 1`  \nPositions (from right to left): 5 4 3 2 1 0\n\nNow compute:\n\n- 1 × 2⁵ = 1 × 32 = 32  \n- 0 × 2⁴ = 0 ×  16 = 0  \n- 1 × 2³ = 1 ×  8  = 8  \n- 1 × 2² = 1 ×  4  = 4  \n- 0 × 2¹ = 0 ×  2  = 0  \n- 1 × 2⁰ = 1 ×  1  = 1  \n\nAdd them up:  \n32 + 0 + 8 + 4 + 0 + 1 = **45**\n\nAnswer: 45"
+      },
+      {
+        "id": "linear",
+        "cat": "math",
+        "ok": true,
+        "first_token_s": 1.1174373329995433,
+        "tokens_per_s": 34.77237644432243,
+        "tokens": 119,
+        "elapsed_s": 4.539535082993098,
+        "reply": "We are given the equation:\n\n$$\n3x - 7 = 2x + 5\n$$\n\n**Step 1:** Subtract $2x$ from both sides to get all $x$-terms on one side:\n\n$$\n3x - 2x - 7 = 5\n$$\n\n$$\nx - 7 = 5\n$$\n\n**Step 2:** Add 7 to both sides:\n\n$$\nx = 5 + 7\n$$\n\n$$\nx = 12\n$$\n\n**Answer: 12**"
+      },
+      {
+        "id": "integral",
+        "cat": "math",
+        "ok": true,
+        "first_token_s": 1.1270812499860767,
+        "tokens_per_s": 34.72550625090971,
+        "tokens": 136,
+        "elapsed_s": 5.043501707987161,
+        "reply": "We are asked to compute the definite integral of $ 2x $ from $ x = 0 $ to $ x = 3 $.\n\nStep 1: Find the antiderivative of $ 2x $.\n\n$$\n\\int 2x \\, dx = x^2 + C\n$$\n\nStep 2: Evaluate the definite integral from 0 to 3.\n\n$$\n\\int_0^3 2x \\, dx = \\left[ x^2 \\right]_0^3 = (3)^2 - (0)^2 = 9 - 0 = 9\n$$\n\n**Answer: 9**"
+      },
+      {
+        "id": "minutes",
+        "cat": "math",
+        "ok": true,
+        "first_token_s": 1.1135808750113938,
+        "tokens_per_s": 34.81099983637354,
+        "tokens": 92,
+        "elapsed_s": 3.7563622500019846,
+        "reply": "One week has 7 days.  \nEach day has 24 hours.  \nEach hour has 60 minutes.\n\nSo, total minutes in one week:\n\n7 days × 24 hours/day × 60 minutes/hour  \n= 7 × 24 × 60  \n= 168 × 60  \n= 10,080 minutes\n\n**Answer: 10080**"
+      },
+      {
+        "id": "py_alias",
+        "cat": "code",
+        "ok": true,
+        "first_token_s": 1.1229129169951193,
+        "tokens_per_s": 34.89101711973243,
+        "tokens": 108,
+        "elapsed_s": 4.218198582995683,
+        "reply": "The code modifies the list `x` by appending `4` to it. Since `y` is a reference to the same list as `x`, changing `y` affects `x`.\n\n- Initially, `x = [1, 2, 3]`, so `len(x)` is 3.\n- After `y.append(4)`, `x` becomes `[1, 2, 3, 4]`.\n- So, `len(x)` becomes 4.\n\n**Answer: 4**"
+      },
+      {
+        "id": "py_slice",
+        "cat": "code",
+        "ok": true,
+        "first_token_s": 1.1307710420078365,
+        "tokens_per_s": 34.497176027005914,
+        "tokens": 174,
+        "elapsed_s": 6.174634875002084,
+        "reply": "We are given the following Python code:\n\n```python\nprint(sorted([3, 1, 2], reverse=True)[1:])\n```\n\nLet's break it down step by step:\n\n1. `sorted([3, 1, 2], reverse=True)`:\n   - Sorts the list `[3, 1, 2]` in descending order.\n   - Result: `[3, 2, 1]`\n\n2. `[1:]`:\n   - Slices the list from index 1 to the end.\n   - So, from `[3, 2, 1]`, taking from index 1 onward → `[2, 1]`\n\n3. `print(...)`:\n   - Prints the result.\n\nSo, the output is `[2, 1]`.\n\n**Answer: [2, 1]**"
+      },
+      {
+        "id": "bigo",
+        "cat": "code",
+        "ok": true,
+        "first_token_s": 1.1139661250053905,
+        "tokens_per_s": 35.11953164988816,
+        "tokens": 85,
+        "elapsed_s": 3.534256209008163,
+        "reply": "Binary search works by repeatedly dividing the search interval in half. In the worst case, it makes log₂(n) comparisons to find the target element or determine it's not present.\n\nEach comparison reduces the search space by half, so the number of steps required is proportional to log₂(n).\n\nThus, the worst-case time complexity of binary search on a sorted array of n elements is:\n\n**Answer: O(log n)**"
+      },
+      {
+        "id": "write_palin",
+        "cat": "codegen",
+        "ok": true,
+        "first_token_s": 1.1132074170018313,
+        "tokens_per_s": 35.28172969626649,
+        "tokens": 62,
+        "elapsed_s": 2.870489542008727,
+        "reply": "```python\ndef is_palindrome(s):\n    # Remove non-alphanumeric characters and convert to lowercase\n    cleaned = ''.join(char.lower() for char in s if char.isalnum())\n    # Check if the cleaned string reads the same forwards and backwards\n    return cleaned == cleaned[::-1]\n```"
+      },
+      {
+        "id": "write_fib",
+        "cat": "codegen",
+        "ok": true,
+        "first_token_s": 1.2581923749967245,
+        "tokens_per_s": 35.03260778706841,
+        "tokens": 59,
+        "elapsed_s": 2.942299999995157,
+        "reply": "```python\ndef fib(n):\n    if n <= 1:\n        return n\n    a, b = 0, 1\n    for _ in range(2, n + 1):\n        a, b = b, a + b\n    return b\n```"
+      },
+      {
+        "id": "capital",
+        "cat": "facts",
+        "ok": true,
+        "first_token_s": 0.9665867080038879,
+        "tokens_per_s": 37.41693167632159,
+        "tokens": 13,
+        "elapsed_s": 1.3140122080076253,
+        "reply": "The capital of Australia is Canberra.\n\n**Answer: Canberra**"
+      },
+      {
+        "id": "author",
+        "cat": "facts",
+        "ok": true,
+        "first_token_s": 1.126565083002788,
+        "tokens_per_s": 36.01952858759005,
+        "tokens": 27,
+        "elapsed_s": 1.8761535420053406,
+        "reply": "The novel *One Hundred Years of Solitude* was written by Gabriel García Márquez.\n\nAnswer: Gabriel García Márquez"
+      },
+      {
+        "id": "tungsten",
+        "cat": "facts",
+        "ok": true,
+        "first_token_s": 1.1243655830039643,
+        "tokens_per_s": 37.40892096746837,
+        "tokens": 15,
+        "elapsed_s": 1.5253449169977102,
+        "reply": "The chemical symbol for tungsten is W.\n\n**Answer: W**"
+      },
+      {
+        "id": "berlin",
+        "cat": "facts",
+        "ok": true,
+        "first_token_s": 1.1205517920025159,
+        "tokens_per_s": 36.68244294146812,
+        "tokens": 20,
+        "elapsed_s": 1.6657691250002244,
+        "reply": "The Berlin Wall fell in 1989.  \n\nAnswer: 1989"
+      },
+      {
+        "id": "translate",
+        "cat": "nlp",
+        "ok": false,
+        "first_token_s": 1.1267955840012291,
+        "tokens_per_s": 38.34709490901241,
+        "tokens": 11,
+        "elapsed_s": 1.4136208340059966,
+        "reply": "Le chat dormait sur le canapé."
+      },
+      {
+        "id": "sentiment",
+        "cat": "nlp",
+        "ok": true,
+        "first_token_s": 1.1243821669922909,
+        "tokens_per_s": 36.04007964565746,
+        "tokens": 29,
+        "elapsed_s": 1.9290498750051484,
+        "reply": "The review states that the user waited an hour and the food was cold, which indicates dissatisfaction with the experience.\n\n**Answer: NEGATIVE**"
+      },
+      {
+        "id": "ner",
+        "cat": "nlp",
+        "ok": true,
+        "first_token_s": 1.1204269579902757,
+        "tokens_per_s": 35.816159852405086,
+        "tokens": 34,
+        "elapsed_s": 2.0696321669965982,
+        "reply": "The people's names mentioned in the sentence are:\n\n- Ada Lovelace  \n- Charles Babbage\n\n**Answer: Ada Lovelace, Charles Babbage**"
+      }
+    ]
+  }
+]

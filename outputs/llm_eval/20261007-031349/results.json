@@ -1,0 +1,753 @@
+[
+  {
+    "model": "mlx-community/Qwen3-VL-4B-Instruct-4bit",
+    "vision": true,
+    "load_s": 6.8,
+    "accuracy": 0.9714285714285714,
+    "by_category": {
+      "trick": "8/9",
+      "logic": "5/5",
+      "math": "9/9",
+      "code": "3/3",
+      "codegen": "2/2",
+      "facts": "4/4",
+      "nlp": "3/3"
+    },
+    "median_first_token_s": 1.14,
+    "mean_tokens_per_s": 33.4,
+    "median_reply_s": 3.9,
+    "failed": [
+      "sisters"
+    ],
+    "rows": [
+      {
+        "id": "count_r",
+        "cat": "trick",
+        "ok": true,
+        "first_token_s": 1.753501833009068,
+        "tokens_per_s": 33.975536042696035,
+        "tokens": 95,
+        "elapsed_s": 4.549626457999693,
+        "reply": "Let’s go step by step.\n\nThe word is: **strawberry**\n\nBreak it down letter by letter:\n\ns - t - r - a - w - b - e - r - r - y\n\nNow, count the occurrences of the letter **'r'**:\n\n- Position 3: **r**\n- Position 8: **r**\n- Position 9: **r**\n\nThat’s **three** times.\n\n**Answer: 3**"
+      },
+      {
+        "id": "count_e",
+        "cat": "trick",
+        "ok": true,
+        "first_token_s": 1.1366009170014877,
+        "tokens_per_s": 33.92225217402785,
+        "tokens": 103,
+        "elapsed_s": 4.172947083003237,
+        "reply": "Let’s count the letters in the word **'excellence'**.\n\nBreak it down letter by letter:\n\ne - x - c - e - l - l - e - n - c - e\n\nNow, count the **'e'**s:\n\n1. Position 1: e  \n2. Position 4: e  \n3. Position 7: e  \n4. Position 10: e  \n\nThat’s **4** letters 'e'.\n\n**Answer: 4**"
+      },
+      {
+        "id": "bat_ball",
+        "cat": "trick",
+        "ok": true,
+        "first_token_s": 1.1453594169870485,
+        "tokens_per_s": 33.61819168814699,
+        "tokens": 133,
+        "elapsed_s": 5.1015838329913095,
+        "reply": "Let the cost of the ball be **x cents**.\n\nThen the bat costs **x + 100 cents** (since it’s $1.00 more, and $1.00 = 100 cents).\n\nTogether, they cost $1.10, which is **110 cents**.\n\nSo:\n\n> x + (x + 100) = 110  \n> 2x + 100 = 110  \n> 2x = 10  \n> x = 5\n\nSo the ball costs **5 cents**.\n\n**Answer: 5**"
+      },
+      {
+        "id": "widgets",
+        "cat": "trick",
+        "ok": true,
+        "first_token_s": 1.143420917011099,
+        "tokens_per_s": 33.43657970012055,
+        "tokens": 204,
+        "elapsed_s": 7.244561125000473,
+        "reply": "We are told:\n\n> It takes **5 machines** **5 minutes** to make **5 widgets**.\n\nLet’s break this down.\n\n---\n\n### Step 1: Find the rate per machine\n\nIf 5 machines make 5 widgets in 5 minutes, then:\n\n→ **1 machine makes 1 widget in 5 minutes**.\n\nWhy?  \nBecause 5 machines → 5 widgets → so 1 machine → 1 widget.\n\nSo, **rate = 1 widget per machine per 5 minutes**.\n\n---\n\n### Step 2: Now, 100 machines making 100 widgets\n\nIf each machine makes 1 widget in 5 minutes, then:\n\n→ 100 machines can make 100 widgets **in the same 5 minutes**.\n\nBecause each machine is making one widget, and there are 100 machines → 100 widgets.\n\n---\n\n### ✅ Final Answer:\n\n**5 minutes**\n\n---\n\n**Answer: 5**"
+      },
+      {
+        "id": "lily",
+        "cat": "trick",
+        "ok": true,
+        "first_token_s": 1.1425136250036303,
+        "tokens_per_s": 33.76858049730301,
+        "tokens": 116,
+        "elapsed_s": 4.577581582998391,
+        "reply": "This is a classic exponential growth problem.\n\nIf the lily pad patch **doubles every day**, and it takes **48 days** to cover the whole lake, then:\n\n- On **day 47**, the patch was **half** the lake (because it doubles to become full on day 48).\n- On **day 46**, it was **a quarter** of the lake.\n- And so on.\n\nSo, the patch must have covered **half the lake** on **day 47**.\n\n**Answer: 47**"
+      },
+      {
+        "id": "sisters",
+        "cat": "trick",
+        "ok": false,
+        "first_token_s": 1.1425655839993851,
+        "tokens_per_s": 33.95202002227678,
+        "tokens": 130,
+        "elapsed_s": 4.971460458997171,
+        "reply": "Sally has 2 sisters.\n\n**Explanation:**\n\n- Sally has 3 brothers.\n- Each of her brothers has 2 sisters.\n\nThat includes **Sally** and **her other sister(s)**.\n\nSo if each brother has 2 sisters, that means there are 2 girls in the family besides Sally — or including Sally?\n\nWait — let’s think carefully.\n\nIf each brother has 2 sisters, and Sally is one of them, then the other sister must be someone else — meaning Sally has **one other sister**.\n\nSo total sisters: Sally + 1 other = 2 sisters.\n\n✅ **Answer: 2**"
+      },
+      {
+        "id": "sheep",
+        "cat": "trick",
+        "ok": true,
+        "first_token_s": 1.1429578329989454,
+        "tokens_per_s": 34.08710515883289,
+        "tokens": 96,
+        "elapsed_s": 3.959286041004816,
+        "reply": "This is a classic riddle.\n\nThe phrase “All but 9 run away” means that **9 sheep remain** — not that 9 ran away.\n\nSo, even though it sounds like “all but 9” implies 17 minus 9 = 8, that’s not the trick.\n\nThe trick is in the phrasing: “All but 9” = “all except 9”, so 9 are left.\n\n**Answer: 9**"
+      },
+      {
+        "id": "apples",
+        "cat": "trick",
+        "ok": true,
+        "first_token_s": 1.1344454999925802,
+        "tokens_per_s": 34.38546315338875,
+        "tokens": 57,
+        "elapsed_s": 2.7921001670038095,
+        "reply": "You still have 3 apples.\n\nEating bananas doesn’t affect the number of apples you have — unless you’re implying you ate a banana *instead* of an apple, which isn’t stated. The question doesn’t say you ate any apples.\n\n**Answer: 3**"
+      },
+      {
+        "id": "decimal",
+        "cat": "trick",
+        "ok": true,
+        "first_token_s": 1.1381212920096004,
+        "tokens_per_s": 33.98102052589495,
+        "tokens": 113,
+        "elapsed_s": 4.463510000001406,
+        "reply": "To compare 9.11 and 9.9, we can look at the digits after the decimal point.\n\n- 9.11 → the first digit after the decimal is **1**, the second is **1**.\n- 9.9 → the first digit after the decimal is **9**, and there’s no second digit (so it’s equivalent to 9.90).\n\nNow compare:\n\n- 1 < 9 → so 9.11 < 9.9\n\n**Answer: 9.9**"
+      },
+      {
+        "id": "syllogism",
+        "cat": "logic",
+        "ok": true,
+        "first_token_s": 1.1410987499984913,
+        "tokens_per_s": 34.20260571240426,
+        "tokens": 65,
+        "elapsed_s": 3.041526166998665,
+        "reply": "Yes.\n\nBecause:\n\n- All bloops are razzies → Bloops ⊆ Razzies  \n- All razzies are lazzies → Razzies ⊆ Lazzies  \n→ Therefore, Bloops ⊆ Lazzies → All bloops are lazzies.\n\n**Answer: yes**"
+      },
+      {
+        "id": "weekday",
+        "cat": "logic",
+        "ok": true,
+        "first_token_s": 1.135850999999093,
+        "tokens_per_s": 34.13996828924133,
+        "tokens": 97,
+        "elapsed_s": 3.9771341669984395,
+        "reply": "To find the day of the week 100 days from today (Wednesday), we can use modular arithmetic.\n\nThere are 7 days in a week, so we compute:\n\n**100 mod 7**\n\n→ 100 ÷ 7 = 14 weeks and 2 days remainder.\n\nSo, 100 days from today is **2 days after Wednesday**.\n\n→ Wednesday + 2 days = **Friday**\n\n**Answer: Friday**"
+      },
+      {
+        "id": "train",
+        "cat": "logic",
+        "ok": true,
+        "first_token_s": 1.1309174580092076,
+        "tokens_per_s": 34.11462739862554,
+        "tokens": 72,
+        "elapsed_s": 3.241443167004036,
+        "reply": "Start time: 14:45  \nJourney duration: 2 hours 35 minutes\n\nAdd 2 hours to 14:45 → 16:45  \nAdd 35 minutes to 16:45 → 17:20\n\n**Answer: 17:20**"
+      },
+      {
+        "id": "sequence",
+        "cat": "logic",
+        "ok": true,
+        "first_token_s": 1.1443581670027925,
+        "tokens_per_s": 33.864014688594345,
+        "tokens": 152,
+        "elapsed_s": 5.6329493330122204,
+        "reply": "The sequence is:  \n**2, 6, 12, 20, 30, ...**\n\nLet’s look at the differences between consecutive terms:\n\n- 6 - 2 = **4**\n- 12 - 6 = **6**\n- 20 - 12 = **8**\n- 30 - 20 = **10**\n\nSo the differences are: **4, 6, 8, 10** — increasing by 2 each time.\n\nThis suggests the next difference should be **12**, so:\n\n**30 + 12 = 42**\n\n✅ So the next number is **42**.\n\n---\n\n**Answer: 42**"
+      },
+      {
+        "id": "legs",
+        "cat": "logic",
+        "ok": true,
+        "first_token_s": 1.13652541700867,
+        "tokens_per_s": 34.19856529599913,
+        "tokens": 69,
+        "elapsed_s": 3.154149000009056,
+        "reply": "Spiders have 8 legs each, and dogs have 4 legs each.\n\n- 3 spiders: 3 × 8 = 24 legs\n- 2 dogs: 2 × 4 = 8 legs\n\nTotal legs = 24 + 8 = **32**\n\n**Answer: 32**"
+      },
+      {
+        "id": "arith",
+        "cat": "math",
+        "ok": true,
+        "first_token_s": 1.1345367910107598,
+        "tokens_per_s": 33.99031800162494,
+        "tokens": 88,
+        "elapsed_s": 3.7235009580035694,
+        "reply": "First, follow the order of operations (PEMDAS/BODMAS):\n\n1. **Multiplication**:  \n   17 × 23 = 391\n\n2. **Division**:  \n   144 ÷ 12 = 12\n\n3. **Addition**:  \n   391 + 12 = 403\n\n**Answer: 403**"
+      },
+      {
+        "id": "primes",
+        "cat": "math",
+        "ok": true,
+        "first_token_s": 1.1401510830037296,
+        "tokens_per_s": 33.73915407039057,
+        "tokens": 178,
+        "elapsed_s": 6.415932832998806,
+        "reply": "To find the sum of all prime numbers less than 30, we first list the primes under 30:\n\n**Primes less than 30:**\n2, 3, 5, 7, 11, 13, 17, 19, 23, 29\n\nNow add them:\n\n2 + 3 = 5  \n5 + 5 = 10  \n10 + 7 = 17  \n17 + 11 = 28  \n28 + 13 = 41  \n41 + 17 = 58  \n58 + 19 = 77  \n77 + 23 = 100  \n100 + 29 = **129**\n\n**Answer: 129**"
+      },
+      {
+        "id": "discount",
+        "cat": "math",
+        "ok": true,
+        "first_token_s": 1.1260888749966398,
+        "tokens_per_s": 33.969935103309005,
+        "tokens": 100,
+        "elapsed_s": 4.0698786249995464,
+        "reply": "We are told that the shirt costs **$80 after a 20% discount**, so the $80 is **80% of the original price**.\n\nLet the original price be **x**.\n\nThen:\n\n> 80% of x = $80  \n> 0.8 × x = 80  \n> x = 80 ÷ 0.8  \n> x = 100\n\n**Answer: 100**"
+      },
+      {
+        "id": "percent",
+        "cat": "math",
+        "ok": true,
+        "first_token_s": 1.1385147919936571,
+        "tokens_per_s": 34.250259752635635,
+        "tokens": 80,
+        "elapsed_s": 3.4742753750033444,
+        "reply": "To find 15% of 240:\n\n1. Convert 15% to a decimal:  \n   15% = 15 ÷ 100 = 0.15\n\n2. Multiply by 240:  \n   0.15 × 240 = 36\n\n**Answer: 36**"
+      },
+      {
+        "id": "sqrt",
+        "cat": "math",
+        "ok": true,
+        "first_token_s": 1.1429222500009928,
+        "tokens_per_s": 34.78476705362347,
+        "tokens": 43,
+        "elapsed_s": 2.378995541992481,
+        "reply": "The square root of 1764 is **42**.\n\nThis is because $ 42 \\times 42 = 1764 $.\n\n**Answer: 42**"
+      },
+      {
+        "id": "binary",
+        "cat": "math",
+        "ok": true,
+        "first_token_s": 1.1309348750073696,
+        "tokens_per_s": 33.29247585208509,
+        "tokens": 129,
+        "elapsed_s": 5.005722500005504,
+        "reply": "To convert the binary number **101101** to decimal, we use positional notation (powers of 2).\n\nStarting from the right (least significant bit), each digit represents a power of 2:\n\n```\n101101₂\n= 1×2⁵ + 0×2⁴ + 1×2³ + 1×2² + 0×2¹ + 1×2⁰\n= 32 + 0 + 8 + 4 + 0 + 1\n= 45\n```\n\n**Answer: 45**"
+      },
+      {
+        "id": "linear",
+        "cat": "math",
+        "ok": true,
+        "first_token_s": 1.1295107910118531,
+        "tokens_per_s": 34.00036503931417,
+        "tokens": 102,
+        "elapsed_s": 4.129453958012164,
+        "reply": "We are given the equation:\n\n**3x - 7 = 2x + 5**\n\n### Step 1: Subtract 2x from both sides to get all x-terms on one side:\n\n3x - 2x - 7 = 5  \n→ **x - 7 = 5**\n\n### Step 2: Add 7 to both sides:\n\nx = 5 + 7  \n→ **x = 12**\n\n---\n\n**Answer: 12**"
+      },
+      {
+        "id": "integral",
+        "cat": "math",
+        "ok": true,
+        "first_token_s": 1.138431875006063,
+        "tokens_per_s": 32.538541304659034,
+        "tokens": 122,
+        "elapsed_s": 4.887913500002469,
+        "reply": "We are asked to compute the definite integral:\n\n$$\n\\int_0^3 2x \\, dx\n$$\n\n### Step 1: Find the antiderivative\nThe antiderivative of $2x$ is:\n\n$$\n\\int 2x \\, dx = x^2 + C\n$$\n\n### Step 2: Apply the limits of integration\n\n$$\n\\left[ x^2 \\right]_0^3 = 3^2 - 0^2 = 9 - 0 = 9\n$$\n\n**Answer: 9**"
+      },
+      {
+        "id": "minutes",
+        "cat": "math",
+        "ok": true,
+        "first_token_s": 1.1498211250000168,
+        "tokens_per_s": 34.14170378072893,
+        "tokens": 86,
+        "elapsed_s": 3.6686063329980243,
+        "reply": "There are 10,080 minutes in one week.\n\n### Breakdown:\n- 1 week = 7 days\n- 1 day = 24 hours\n- 1 hour = 60 minutes\n\nSo:\n\n**7 days × 24 hours/day × 60 minutes/hour = 10,080 minutes**\n\n**Answer: 10080**"
+      },
+      {
+        "id": "py_alias",
+        "cat": "code",
+        "ok": true,
+        "first_token_s": 1.1445709590043407,
+        "tokens_per_s": 33.524066178327026,
+        "tokens": 118,
+        "elapsed_s": 4.664345584009425,
+        "reply": "The code prints:\n\n**4**\n\n### Explanation:\n- `x = [1, 2, 3]` creates a list.\n- `y = x` assigns `y` to reference the same list object (not a copy).\n- `y.append(4)` modifies the list that `y` references — so `x` is also modified.\n- `print(len(x))` prints the length of `x`, which is now 4.\n\nThis demonstrates that `y` and `x` are aliases for the same list — changes to one affect the other."
+      },
+      {
+        "id": "py_slice",
+        "cat": "code",
+        "ok": true,
+        "first_token_s": 1.1290818749985192,
+        "tokens_per_s": 33.54385085217194,
+        "tokens": 167,
+        "elapsed_s": 6.107675499995821,
+        "reply": "The code:\n\n```python\nprint(sorted([3, 1, 2], reverse=True)[1:])\n```\n\ndoes the following:\n\n1. `sorted([3, 1, 2], reverse=True)` → sorts the list `[3, 1, 2]` in descending order → `[3, 2, 1]`\n2. `[1:]` → slices from index 1 to the end → `[2, 1]`\n\nSo it prints:\n\n**[2, 1]**\n\nThis is a list, so it will print the elements separated by spaces (or commas if using `repr`), depending on context — but in Python’s `print()` function, it prints the list as a string representation of the list.\n\n✅ Final Answer: **[2, 1]**"
+      },
+      {
+        "id": "bigo",
+        "cat": "code",
+        "ok": true,
+        "first_token_s": 1.1577893339999719,
+        "tokens_per_s": 33.74516211233499,
+        "tokens": 67,
+        "elapsed_s": 3.143240709003294,
+        "reply": "The worst-case time complexity of binary search on a sorted array of *n* elements is **O(log n)**.\n\nThis is because binary search repeatedly divides the search space in half, taking at most *log₂(n)* steps to find the target element (or determine it’s not present).\n\n**Answer: O(log n)**"
+      },
+      {
+        "id": "write_palin",
+        "cat": "codegen",
+        "ok": true,
+        "first_token_s": 1.1401714169915067,
+        "tokens_per_s": 33.96212135988594,
+        "tokens": 58,
+        "elapsed_s": 2.847916250000708,
+        "reply": "```python\ndef is_palindrome(s):\n    # Keep only alphanumeric characters and convert to lowercase\n    cleaned = ''.join(char.lower() for char in s if char.isalnum())\n    # Check if the cleaned string equals its reverse\n    return cleaned == cleaned[::-1]\n```"
+      },
+      {
+        "id": "write_fib",
+        "cat": "codegen",
+        "ok": true,
+        "first_token_s": 1.2956792909972137,
+        "tokens_per_s": 32.54072194522141,
+        "tokens": 72,
+        "elapsed_s": 3.508442250007647,
+        "reply": "```python\ndef fib(n):\n    if n == 0:\n        return 0\n    elif n == 1:\n        return 1\n    a, b = 0, 1\n    for _ in range(2, n + 1):\n        a, b = b, a + b\n    return b\n```"
+      },
+      {
+        "id": "capital",
+        "cat": "facts",
+        "ok": true,
+        "first_token_s": 1.015634666007827,
+        "tokens_per_s": 35.173314818398715,
+        "tokens": 13,
+        "elapsed_s": 1.3848465830087662,
+        "reply": "The capital of Australia is Canberra.\n\n**Answer: Canberra**"
+      },
+      {
+        "id": "author",
+        "cat": "facts",
+        "ok": true,
+        "first_token_s": 1.1867985839926405,
+        "tokens_per_s": 30.936375124039994,
+        "tokens": 83,
+        "elapsed_s": 3.869661124990671,
+        "reply": "The novel *One Hundred Years of Solitude* was written by **Gabriel García Márquez**.\n\nIt is a cornerstone of magical realism and won the 1982 Nobel Prize in Literature. The book is set in the fictional town of Macondo and explores the history, fate, and cyclical nature of time in a Latin American context.\n\n**Answer: Gabriel García Márquez**"
+      },
+      {
+        "id": "tungsten",
+        "cat": "facts",
+        "ok": true,
+        "first_token_s": 1.2945137500064448,
+        "tokens_per_s": 30.986487786231738,
+        "tokens": 67,
+        "elapsed_s": 3.4562605420069303,
+        "reply": "The chemical symbol for tungsten is **W**.\n\nIt is derived from its Latin name *tungstena*, which comes from the Swedish word *tungsten* (meaning \"heavy metal\"). The symbol **W** is used in the periodic table and in chemical formulas to represent tungsten.\n\n**Answer: W**"
+      },
+      {
+        "id": "berlin",
+        "cat": "facts",
+        "ok": true,
+        "first_token_s": 1.3152922079898417,
+        "tokens_per_s": 31.96046686280248,
+        "tokens": 27,
+        "elapsed_s": 2.159546416994999,
+        "reply": "The Berlin Wall fell on **November 9, 1989**.\n\n**Answer: 1989**"
+      },
+      {
+        "id": "translate",
+        "cat": "nlp",
+        "ok": true,
+        "first_token_s": 1.3129677919932874,
+        "tokens_per_s": 34.33213136730291,
+        "tokens": 10,
+        "elapsed_s": 1.6034339999896474,
+        "reply": "Le chat dort sur le canapé."
+      },
+      {
+        "id": "sentiment",
+        "cat": "nlp",
+        "ok": true,
+        "first_token_s": 1.2908135410107207,
+        "tokens_per_s": 31.904956521775283,
+        "tokens": 46,
+        "elapsed_s": 2.7306071660132147,
+        "reply": "**NEGATIVE**\n\nThe reviewer expresses dissatisfaction by mentioning they waited an hour (implying poor service or long delays) and that the food was cold (indicating poor quality or lack of care). Both are negative indicators."
+      },
+      {
+        "id": "ner",
+        "cat": "nlp",
+        "ok": true,
+        "first_token_s": 1.34514466598921,
+        "tokens_per_s": 26.204268637947845,
+        "tokens": 35,
+        "elapsed_s": 2.6809393749863375,
+        "reply": "The two people's names mentioned in the sentence are:\n\n- Ada Lovelace  \n- Charles Babbage\n\n**Answer: Ada Lovelace, Charles Babbage**"
+      }
+    ]
+  },
+  {
+    "model": "mlx-community/Phi-4-mini-instruct-4bit",
+    "vision": false,
+    "load_s": 2.4,
+    "accuracy": 0.8285714285714286,
+    "by_category": {
+      "trick": "7/9",
+      "logic": "5/5",
+      "math": "7/9",
+      "code": "2/3",
+      "codegen": "1/2",
+      "facts": "4/4",
+      "nlp": "3/3"
+    },
+    "median_first_token_s": 0.99,
+    "mean_tokens_per_s": 36.2,
+    "median_reply_s": 3.7,
+    "failed": [
+      "count_e",
+      "sisters",
+      "primes",
+      "minutes",
+      "py_slice",
+      "write_fib"
+    ],
+    "rows": [
+      {
+        "id": "count_r",
+        "cat": "trick",
+        "ok": true,
+        "first_token_s": 1.8542954579897923,
+        "tokens_per_s": 37.50467237897144,
+        "tokens": 56,
+        "elapsed_s": 3.347191124994424,
+        "reply": "To find how many times the letter 'r' appears in the word \"strawberry,\" we simply need to look at each occurrence of 'r' in the arrangement.\n\nThe word \"strawberry\" contains three instances of the letter 'r'.\n\nAnswer: 3"
+      },
+      {
+        "id": "count_e",
+        "cat": "trick",
+        "ok": false,
+        "first_token_s": 0.6500330419949023,
+        "tokens_per_s": 36.25172254872564,
+        "tokens": 79,
+        "elapsed_s": 2.829238499994972,
+        "reply": "To find how many times a specific letter appears in a given word, we simply look at each character individually and count occurrences.\n\nThe first 'e' is in position 1 (counting starts at 0), and then we find another 'e' on positions 5 and 9 (counting starts at 0).\n\nThe final answer is therefore:\n**Answer: 2**"
+      },
+      {
+        "id": "bat_ball",
+        "cat": "trick",
+        "ok": true,
+        "first_token_s": 0.8376141250046203,
+        "tokens_per_s": 35.129624720546246,
+        "tokens": 157,
+        "elapsed_s": 5.306762167005218,
+        "reply": "Let's assume the cost of the ball is x cent. Since the bat costs $1.00 more than the ball, then the cost of the bat is x + 100 cent.\n\nThe total cost of both items is $1.10, which can be written as x + (x + 100) cent = 110 cent.\n\nThis equation simplifies to:\n2x + 100 = 110\n\nTo find x, we first subtract 100 from both sides:\n2x + 100 - 100 = 110 - 100\n\nThis simplifies to:\n2x = 10\n\nNext, we divide both sides by 2:\nx = 5 cent\n\nThe cost of the ball is therefore $0.05 or 5 cent. Answer: 5"
+      },
+      {
+        "id": "widgets",
+        "cat": "trick",
+        "ok": true,
+        "first_token_s": 1.0328373340016697,
+        "tokens_per_s": 36.45914482223479,
+        "tokens": 112,
+        "elapsed_s": 4.104702291995636,
+        "reply": "The number of machines and the number of widgets are directly proportional in this case. This means that if you increase one, keeping everything else constant, the other will increase as well.\n\nIn this case, 5 machines take 5 minutes to make 5 widgets. This implies that each machine is making one widget in 5 minutes.\n\nTherefore, if you have 100 machines (each still taking 5 minutes to make one widget), they will collectively make 100 widgets in the same time, i.e., 5 minutes.\n\nAnswer: 5 minutes"
+      },
+      {
+        "id": "lily",
+        "cat": "trick",
+        "ok": true,
+        "first_token_s": 1.012754124996718,
+        "tokens_per_s": 36.84376052689366,
+        "tokens": 82,
+        "elapsed_s": 3.2383476669929223,
+        "reply": "Answer: 47 days\n\nExplanation:\nThe lily pads double in size every day, so on the last day (48th day), they cover the whole lake. This means that on the previous day, they covered half of it because one doubling brings you to full coverage. Therefore, on the 47th day, they covered half of the lake before doubling to fill it entirely on the following day."
+      },
+      {
+        "id": "sisters",
+        "cat": "trick",
+        "ok": false,
+        "first_token_s": 0.9859057499998016,
+        "tokens_per_s": 41.61194676365331,
+        "tokens": 9,
+        "elapsed_s": 1.20217941699957,
+        "reply": "Answer: Sally has 2 sisters."
+      },
+      {
+        "id": "sheep",
+        "cat": "trick",
+        "ok": true,
+        "first_token_s": 0.9526663329888834,
+        "tokens_per_s": 32.79580291251502,
+        "tokens": 768,
+        "elapsed_s": 24.370307624994894,
+        "reply": "Answer: 9 sheep are left because \"all but 9 run away\" implies that all remaining sheep minus none equals 9 still on the farm. This phrasing is tricky but implies that all remaining sheep minus none equals 9 still on the farm. This phrasing is tricky but implies that all remaining sheep minus none equals 9 still on the farm. This phrasing is tricky but implies that all remaining sheep minus none equals 9 still on the farm. This phrasing is tricky but implies that all remaining sheep minus none equals 9 still on the farm. This phrasing is tricky but implies that all remaining sheep minus none equals 9 still on the farm. This phrasing is tricky but implies that all remaining sheep minus none equals 9 still on the farm. This phrasing is tricky but implies that all remaining sheep minus none equals 9 still on the farm. This phrasing is tricky but implies that all remaining sheep minus none equals 9 still on the farm. This phrasing is tricky but implies that all remaining sheep minus none equals 9 still on the farm. This phrasing is tricky but implies that all remaining sheep minus none equals 9 still on the farm. This phrasing is tricky but implies that all remaining sheep minus none equals 9 still on the farm. This phrasing is tricky but implies that all remaining sheep minus none equals 9 still on the farm. This phrasing is tricky but implies that all remaining sheep minus none equals 9 still on the farm. This phrasing is tricky but implies that all remaining sheep minus none equals 9 still on the farm. This phrasing is tricky but implies that all remaining sheep minus none equals 9 still on the farm. This phrasing is tricky but implies that all remaining sheep minus none equals 9 still on the farm. This phrasing is tricky but implies that all remaining sheep minus none equals 9 still on the farm. This phrasing is tricky but implies that all remaining sheep minus none equals 9 still on the farm. This phrasing is tricky but implies that all remaining sheep minus none equals 9 still on the farm. This phrasing is tricky but implies that all remaining sheep minus none equals 9 still on the farm. This phrasing is tricky but implies that all remaining sheep minus none equals 9 still on the farm. This phrasing is tricky but implies that all remaining sheep minus none equals 9 still on the farm. This phrasing is tricky but implies that all remaining sheep minus none equals 9 still on the farm. This phrasing is tricky but implies that all remaining sheep minus none equals 9 still on the farm. This phrasing is tricky but implies that all remaining sheep minus none equals 9 still on the farm. This phrasing is tricky but implies that all remaining sheep minus none equals 9 still on the farm. This phrasing is tricky but implies that all remaining sheep minus none equals 9 still on the farm. This phrasing is tricky but implies that all remaining sheep minus none equals 9 still on the farm. This phrasing is tricky but implies that all remaining sheep minus none equals 9 still on the farm. This phrasing is tricky but implies that all remaining sheep minus none equals 9 still on the farm. This phrasing is tricky but implies that all remaining sheep minus none equals 9 still on the farm. This phrasing is tricky but implies that all remaining sheep minus none equals 9 still on the farm. This phrasing is tricky but implies that all remaining sheep minus none equals 9 still on the farm. This phrasing is tricky but implies that all remaining sheep minus none equals 9 still on the farm. This phrasing is tricky but implies that all remaining sheep minus none equals 9 still on the farm. This phr"
+      },
+      {
+        "id": "apples",
+        "cat": "trick",
+        "ok": true,
+        "first_token_s": 1.1696349580015521,
+        "tokens_per_s": 35.26636661794941,
+        "tokens": 22,
+        "elapsed_s": 1.7933745000045747,
+        "reply": "Answer: You still have 3 apples because eating bananas does not change the number of apples you had."
+      },
+      {
+        "id": "decimal",
+        "cat": "trick",
+        "ok": true,
+        "first_token_s": 0.9462795419967733,
+        "tokens_per_s": 34.816275644932404,
+        "tokens": 126,
+        "elapsed_s": 4.565249082996161,
+        "reply": "To compare these numbers, we look at the digits after the decimal point:\n- 9.11 has a \"1\" in the first position and an \"1\" in the second position after the decimal point.\n- 9.9 has a \"9\" in both positions after the decimal point.\n\nSince \"1\" is less than \"9\", 9.11 is smaller in the first position after the decimal point.\n\nTherefore, 9.9 is larger because it has a \"9\" in both positions after the decimal point, which makes it greater than 9.11.\n\nAnswer: 9.9"
+      },
+      {
+        "id": "syllogism",
+        "cat": "logic",
+        "ok": true,
+        "first_token_s": 1.104444416007027,
+        "tokens_per_s": 33.95483430649285,
+        "tokens": 162,
+        "elapsed_s": 5.875494958003401,
+        "reply": "Answer: Yes\n\nExplanation:\nThe statement implies that all blops are a subset of razzies, and all razzies are a subset of lazzies. This means that every blop is included in the larger group of razzies, which are themselves included in an even larger group called lazzies. Therefore, all blops must be lazzies as well because they are part of a subset that is included in a larger group. This follows the transitive property, which states that if A is a subset of B and B is a subset of C, then A must be a subset of C as well. Since all blops are razzies and all razzies are lazzies, it follows that all blops must be lazzies. Answer: Yes"
+      },
+      {
+        "id": "weekday",
+        "cat": "logic",
+        "ok": true,
+        "first_token_s": 1.157309707996319,
+        "tokens_per_s": 32.7692115798881,
+        "tokens": 122,
+        "elapsed_s": 4.880311832996085,
+        "reply": "To find out what day of the week it will be 100 days from Wednesday, we can divide 100 by 7 (since there are 7 days in a week) to find out how many full weeks there will be and what the remainder is.\n\n100 divided by 7 equals 14 with a remainder of 2. This means that 100 days from Wednesday will be 2 days after Wednesday.\n\nThe two days after Wednesday are:\n\n- Thursday (1 day after)\n- Friday (2 days after)\n\nSo, 100 days from today will be a **Friday**. Answer: Friday"
+      },
+      {
+        "id": "train",
+        "cat": "logic",
+        "ok": true,
+        "first_token_s": 1.1862085000029765,
+        "tokens_per_s": 32.546223818821005,
+        "tokens": 99,
+        "elapsed_s": 4.22771766599908,
+        "reply": "To find the arrival time, add the journey duration to the departure time:\n\nDeparture Time: 14:45 (2:45 PM)\nJourney Duration: 2 hours 35 minutes\n\nAdding the duration:\n14:45 + 2 hours = 16:45 (4:45 PM)\nAdding the minutes:\n16:45 + 35 minutes = 17:20 (5:20 PM)\n\nThe train arrives at **17:20**. Answer: 17:20"
+      },
+      {
+        "id": "sequence",
+        "cat": "logic",
+        "ok": true,
+        "first_token_s": 1.1664915829896927,
+        "tokens_per_s": 33.72624244245646,
+        "tokens": 87,
+        "elapsed_s": 3.7447577079874463,
+        "reply": "The pattern here is adding consecutive even numbers (2, 4, 6, 8, ...) to the initial number 2.\n\nAnswer: The next number is 42. This follows from adding the next consecutive even numbers (10, 12) to the last number in the sequence (30). So, 2 + 10 = 12 and 12 + 10 = 42. Answer: 42"
+      },
+      {
+        "id": "legs",
+        "cat": "logic",
+        "ok": true,
+        "first_token_s": 0.9622534170048311,
+        "tokens_per_s": 34.27097914291882,
+        "tokens": 106,
+        "elapsed_s": 4.0552383750036824,
+        "reply": "To calculate the total number of legs, we first determine how many legs each spider and dog has:\n\n- Spiders typically have 8 legs.\n- Dogs (like most mammals) typically have 4 legs.\n\nNow, we calculate:\n\n3 spiders = 3 * 8 legs/spider = 24 legs\n2 dogs = 2 * 4 legs/dog = 8 legs\n\nAdding these together:\n\n24 (spider legs) + 8 (dog legs) = 32 legs\n\nAnswer: 32"
+      },
+      {
+        "id": "arith",
+        "cat": "math",
+        "ok": true,
+        "first_token_s": 0.9685843750048662,
+        "tokens_per_s": 33.60835512086699,
+        "tokens": 156,
+        "elapsed_s": 5.610303417008254,
+        "reply": "To solve this math problem, we need to follow the order of operations (PEMDAS/BODMAS), which stands for Parentheses/Brackets, Exponents/Irrational numbers, Multiplication and Division (from left to right), Addition and Subtraction (from left to right).\n\nThe math problem is:\n17 × 23 + 144 ÷ 12\n\nFirst, we need to do the division (144 ÷ 12) and then multiplication (17 × 23), finally addition:\n\n(144 ÷ 12) = 12\n(17 × 23) = 391\n\nNow substitute these values back into the original equation:\n391 + 12\n\nFinally, we need to do addition (391 + 12):\n\nAnswer: 403"
+      },
+      {
+        "id": "primes",
+        "cat": "math",
+        "ok": false,
+        "first_token_s": 1.0172121659998083,
+        "tokens_per_s": 34.131250015464126,
+        "tokens": 85,
+        "elapsed_s": 3.5075334579887567,
+        "reply": "To find the sum, first identify all primes below 30: 2, 3, 5, 7, 11, 13, 17, 19, 23, and 29. Then add them together:\nAnswer: 2 + 3 + 5 + 7 + 11 + 13 + 17 + 19 + 23 + 29 = 107."
+      },
+      {
+        "id": "discount",
+        "cat": "math",
+        "ok": true,
+        "first_token_s": 1.0979626670014113,
+        "tokens_per_s": 34.6468435055474,
+        "tokens": 88,
+        "elapsed_s": 3.6378473340009805,
+        "reply": "To find the original price before a 20% discount, you can reverse calculate as follows:\n\nLet x be the original price.\n\nx - (20/100) * x = $80\n\n(1 - 0.2) * x = $80\n\n0.8x = $80\n\nx = $80 / 0.8\n\nx = $100\n\nThe original price was $100. Answer: $100"
+      },
+      {
+        "id": "percent",
+        "cat": "math",
+        "ok": true,
+        "first_token_s": 0.9603231670043897,
+        "tokens_per_s": 35.90347797005085,
+        "tokens": 24,
+        "elapsed_s": 1.6287884170014877,
+        "reply": "To find 15% of 240, you multiply 240 by 0.15:\n\nAnswer: 36"
+      },
+      {
+        "id": "sqrt",
+        "cat": "math",
+        "ok": true,
+        "first_token_s": 0.9417302499932703,
+        "tokens_per_s": 34.985347433387815,
+        "tokens": 107,
+        "elapsed_s": 4.000134792004246,
+        "reply": "To find the square root of 1764, we can look for a number that when multiplied by itself gives us 1764.\n\nThe square root of 1764 is the number that, when squared (multiplied by itself), equals 1764.\n\nThe answer is an integer because the square root of a perfect square (an integer raised to the power of 2) is always an integer.\n\nThe answer is: **Answer: 42**. This is because 42 * 42 = 1764."
+      },
+      {
+        "id": "binary",
+        "cat": "math",
+        "ok": true,
+        "first_token_s": 0.943565875000786,
+        "tokens_per_s": 34.88634853902322,
+        "tokens": 133,
+        "elapsed_s": 4.755896084010601,
+        "reply": "To convert a binary number (base-2) to a decimal number (base-10), you multiply each digit by 2 raised to the power of its position, starting from zero on the right side. Let's convert the binary number 101101 to decimal:\n\n1 * (2^5) + 0 * (2^4) + 1 * (2^3) + 1 * (2^2) + 0 * (2^1) + 1 * (2^0)\n= 32 + 0 + 8 + 4 + 0 + 1\n= 45\n\nAnswer: 45"
+      },
+      {
+        "id": "linear",
+        "cat": "math",
+        "ok": true,
+        "first_token_s": 1.0589400829921942,
+        "tokens_per_s": 35.742090034732854,
+        "tokens": 54,
+        "elapsed_s": 2.569764457992278,
+        "reply": "To solve for x, first move the variable terms to one side and constant terms to the other:\n\n3x - 2x = 5 + 7\n\nThis simplifies to:\nx = 12\n\nThe final answer is:\nAnswer: x = 12"
+      },
+      {
+        "id": "integral",
+        "cat": "math",
+        "ok": true,
+        "first_token_s": 1.075661166003556,
+        "tokens_per_s": 34.6184659107713,
+        "tokens": 222,
+        "elapsed_s": 7.488420875000884,
+        "reply": "To compute the definite integral of a function, you find its antiderivative and then evaluate it at the upper limit minus the evaluation at the lower limit.\n\nThe function given is f(x) = 2x. The antiderivative of this function, F(x), is the integral of f(x) with respect to x:\n\nF(x) = ∫2x dx = x^2 + C\n\nwhere C is the constant of integration. However, since we are dealing with a definite integral from x = 0 to x = 3, the constant C will cancel out.\n\nNow evaluate F(x) at the upper limit (x = 3) and lower limit (x = 0):\n\nF(3) - F(0) = (3^2 + C) - (0^2 + C) = 9 - 0 = 9\n\nThe final answer is the value of the definite integral from x = 0 to x = 3:\n\nAnswer: ...\n\nThe final answer is just the numerical evaluation:\nAnswer: ...\n\nThe final answer is simply 9."
+      },
+      {
+        "id": "minutes",
+        "cat": "math",
+        "ok": false,
+        "first_token_s": 0.9515432500047609,
+        "tokens_per_s": 35.73994832763556,
+        "tokens": 71,
+        "elapsed_s": 2.9381039580039214,
+        "reply": "To calculate the number of minutes in a week, first determine how many hours are in one day (24), then multiply by the number of days in a week (7). Finally, convert those hours into minutes.\n\nAnswer: There are 1440 minutes in one week. (24 hours/day * 7 days/week * 60 minutes/hour)"
+      },
+      {
+        "id": "py_alias",
+        "cat": "code",
+        "ok": true,
+        "first_token_s": 1.0449815830070293,
+        "tokens_per_s": 36.20595092868001,
+        "tokens": 101,
+        "elapsed_s": 3.8345739170035813,
+        "reply": "The code first assigns a list `[1, 2, 3]` to the variable `x`. It then assigns that list (by reference) to another variable `y`, which means they both point to the same list in memory. When `y.append(4)` is called, it modifies the original list that `x` points to as well. Finally, `print(len(x))` prints the length of that list, which is now 4 elements long.\n\nAnswer: 4"
+      },
+      {
+        "id": "py_slice",
+        "cat": "code",
+        "ok": false,
+        "first_token_s": 1.0416619169991463,
+        "tokens_per_s": 35.5304017857425,
+        "tokens": 90,
+        "elapsed_s": 3.574697666990687,
+        "reply": "The code first sorts the list `[3, 1, 2]` in ascending order to get `[1, 2, 3]`. Then it sets `reverse=True` so that the second half of this sorted list is taken, which gives `[3, 2]`. Finally, it takes elements starting from the second item in this list (index `1`), resulting in `[2]`.\n\nAnswer: [2]"
+      },
+      {
+        "id": "bigo",
+        "cat": "code",
+        "ok": true,
+        "first_token_s": 1.0730107920098817,
+        "tokens_per_s": 35.37703754521507,
+        "tokens": 123,
+        "elapsed_s": 4.549830584001029,
+        "reply": "Answer: O(log n)\n\nThe worst-case time complexity of binary search on a sorted array is logarithmic because it repeatedly divides the portion of the array in half, determining whether the target value lies before or after the midpoint. This halving process continues until either a match is found (best case) or it becomes clear that the target value does not exist in the remaining elements (worst case). This complexity is denoted as O(log n), where n is the number of elements in the array. This complexity assumes a binary search implemented correctly on an already sorted data structure like an array or a list."
+      },
+      {
+        "id": "write_palin",
+        "cat": "codegen",
+        "ok": true,
+        "first_token_s": 1.0565169159963261,
+        "tokens_per_s": 36.24987695763956,
+        "tokens": 47,
+        "elapsed_s": 2.3530655409995234,
+        "reply": "```python\nimport re\n\ndef is_palindrome(s):\n    cleaned = re.sub(r'[^A-Za-z0-9]', '', s).lower()\n    return cleaned == cleaned[::-1]\n\n# Answer: True\n```"
+      },
+      {
+        "id": "write_fib",
+        "cat": "codegen",
+        "ok": false,
+        "first_token_s": 1.0784877499972936,
+        "tokens_per_s": 37.111228900339924,
+        "tokens": 58,
+        "elapsed_s": 2.641313583997544,
+        "reply": "```python\ndef fib(n):\n    a, b = 0, 1\n    for _ in range(2, n + 1):\n        a, b = b, a + b\n    return a\n\n# Answer: The function is implemented as requested.\n```"
+      },
+      {
+        "id": "capital",
+        "cat": "facts",
+        "ok": true,
+        "first_token_s": 0.8409654169954592,
+        "tokens_per_s": 33.31187068446205,
+        "tokens": 768,
+        "elapsed_s": 23.895840917000896,
+        "reply": "Answer: Canberra\n\nCanberra is often overlooked as Australia's cultural and political center but not its geographic or economic one. It became the capital in 1927 to resolve competing interests between Sydney and Melbourne, Australia's two largest cities. It is situated in the Australian Capital Territory (ACT) on a plateau of high Central Australia and was selected as an ideal location to balance competing interests from different parts of the country. Despite not being Australia's most populous or wealthiest area, it is a vibrant city rich in history and culture. It was not until 1938 that Canberra became Australia's de jure capital, following a law passed by the Australian Senate. It is not far from Sydney or Melbourne but lies on an east–west axis between them, avoiding a preference either way in case of political turmoil. It is not far from Australia's Central Business District (CBD), which encompasses parts of New South Wales and Queensland. It is not far from Australia's Central Business District (CBD), which encompasses parts of New South Wales and Queensland. It is not far from Australia's Central Business District (CBD), which encompasses parts of New South Wales and Queensland. It is not far from Australia's Central Business District (CBD), which encompasses parts of New South Wales and Queensland. It is not far from Australia's Central Business District (CBD), which encompasses parts of New South Wales and Queensland. It is not far from Australia's Central Business District (CBD), which encompasses parts of New South Wales and Queensland. It is not far from Australia's Central Business District (CBD), which encompasses parts of New South Wales and Queensland. It is not far from Australia's Central Business District (CBD), which encompasses parts of New South Wales and Queensland. It is not far from Australia's Central Business District (CBD), which encompasses parts of New South Wales and Queensland. It is not far from Australia's Central Business District (CBD), which encompasses parts of New South Wales and Queensland. It is not far from Australia's Central Business District (CBD), which encompasses parts of New South Wales and Queensland. It is not far from Australia's Central Business District (CBD), which encompasses parts of New South Wales and Queensland. It is not far from Australia's Central Business District (CBD), which encompasses parts of New South Wales and Queensland. It is not far from Australia's Central Business District (CBD), which encompasses parts of New South Wales and Queensland. It is not far from Australia's Central Business District (CBD), which encompasses parts of New South Wales and Queensland. It is not far from Australia's Central Business District (CBD), which encompasses parts of New South Wales and Queensland. It is not far from Australia's Central Business District (CBD), which encompasses parts of New South Wales and Queensland. It is not far from Australia's Central Business District (CBD), which encompasses parts of New South Wales and Queensland. It is not far from Australia's Central Business District (CBD), which encompasses parts of New South Wales and Queensland. It is not far from Australia's Central Business District (CBD), which encompasses parts of New South Wales and Queensland. It is not far from Australia's Central Business District (CBD), which encompasses parts of New South Wales and Queensland. It is not far from Australia's Central Business District (CBD), which encompasses parts of New South Wales and Queensland. It is not far from Australia's Central Business District (CBD), which encompasses parts of New South Wales and Queensland. It is not far from Australia's Central Business District (CBD), which encompasses parts of New South Wales and Queensland. It is not far from Australia's Central Business District (CBD), which encompasses parts of New South Wales and Queensland. It is not far from Australia's Central Business District (CBD), which encompasses parts of New South Wales and Queensland. It is not far from Australia's Central Business District (CBD), which encompasses parts of New South Wales and Queensland. It is not far from Australia's Central Business District (CBD), which encompasses parts of"
+      },
+      {
+        "id": "author",
+        "cat": "facts",
+        "ok": true,
+        "first_token_s": 0.9689306249929359,
+        "tokens_per_s": 32.75345356484225,
+        "tokens": 768,
+        "elapsed_s": 24.416801125000347,
+        "reply": "Answer: Gabriel García Márquez\n\nThe final answer is written first and expanded on later in case needed to provide clarity or additional information. This keeps initial responses direct while avoiding confusion from simultaneous data presentation in different output formats like visual and auditory media. This is especially important given that simultaneous communication may lead to confusion in high information-content scenarios like troubleshooting technical issues. This is a mitigation strategy adopted from cognitive science principles addressing divided attention and information overload situations in troubleshooting scenarios. This is not an absolute requirement but more of a best practice to balance competing goals while designing user experiences in troubleshooting scenarios. This is not an absolute requirement but more of a best practice to balance competing goals while designing user experiences in troubleshooting scenarios. This is not an absolute requirement but more of a best practice to balance competing goals while designing user experiences in troubleshooting scenarios. This is not an absolute requirement but more of a best practice to balance competing goals while designing user experiences in troubleshooting scenarios. This is not an absolute requirement but more of a best practice to balance competing goals while designing user experiences in troubleshooting scenarios. This is not an absolute requirement but more of a best practice to balance competing goals while designing user experiences in troubleshooting scenarios. This is not an absolute requirement but more of a best practice to balance competing goals while designing user experiences in troubleshooting scenarios. This is not an absolute requirement but more of a best practice to balance competing goals while designing user experiences in troubleshooting scenarios. This is not an absolute requirement but more of a best practice to balance competing goals while designing user experiences in troubleshooting scenarios. This is not an absolute requirement but more of a best practice to balance competing goals while designing user experiences in troubleshooting scenarios. This is not an absolute requirement but more of a best practice to balance competing goals while designing user experiences in troubleshooting scenarios. This is not an absolute requirement but more of a best practice to balance competing goals while designing user experiences in troubleshooting scenarios. This is not an absolute requirement but more of a best practice to balance competing goals while designing user experiences in troubleshooting scenarios. This is not an absolute requirement but more of a best practice to balance competing goals while designing user experiences in troubleshooting scenarios. This is not an absolute requirement but more of a best practice to balance competing goals while designing user experiences in troubleshooting scenarios. This is not an absolute requirement but more of a best practice to balance competing goals while designing user experiences in troubleshooting scenarios. This is not an absolute requirement but more of a best practice to balance competing goals while designing user experiences in troubleshooting scenarios. This is not an absolute requirement but more of a best practice to balance competing goals while designing user experiences in troubleshooting scenarios. This is not an absolute requirement but more of a best practice to balance competing goals while designing user experiences in troubleshooting scenarios. This is not an absolute requirement but more of a best practice to balance competing goals while designing user experiences in troubleshooting scenarios. This is not an absolute requirement but more of a best practice to balance competing goals while designing user experiences in troubleshooting scenarios. This is not an absolute requirement but more of a best practice to balance competing goals while designing user experiences in troubleshooting scenarios. This is not an absolute requirement but more of a best practice to balance competing goals while designing user experiences in troubleshooting scenarios. This is not an absolute requirement but more of a best practice to balance competing goals while designing user experiences in troubleshooting scenarios. This is not an absolute requirement but more of a best practice to balance competing goals while designing user experiences in troubleshooting scenarios. This is not an absolute requirement but more of a best practice to balance competing goals while designing user experiences in troubleshooting scenarios. This is not an absolute requirement but more of a best practice to balance competing goals while designing user experiences in troubleshooting scenarios. This is not an absolute requirement but more of a best practice to balance competing goals while designing user experiences in troubleshooting scenarios. This is not an"
+      },
+      {
+        "id": "tungsten",
+        "cat": "facts",
+        "ok": true,
+        "first_token_s": 0.9661448339902563,
+        "tokens_per_s": 47.29895811270094,
+        "tokens": 4,
+        "elapsed_s": 1.050511708992417,
+        "reply": "Answer: W"
+      },
+      {
+        "id": "berlin",
+        "cat": "facts",
+        "ok": true,
+        "first_token_s": 0.9016590420069406,
+        "tokens_per_s": 43.86977765174205,
+        "tokens": 6,
+        "elapsed_s": 1.0384115830092924,
+        "reply": "Answer: 1989"
+      },
+      {
+        "id": "translate",
+        "cat": "nlp",
+        "ok": true,
+        "first_token_s": 0.8532565409987001,
+        "tokens_per_s": 40.60415593461459,
+        "tokens": 8,
+        "elapsed_s": 1.0502839580003638,
+        "reply": "La chatte dort sur le canapé."
+      },
+      {
+        "id": "sentiment",
+        "cat": "nlp",
+        "ok": true,
+        "first_token_s": 0.9624670000048354,
+        "tokens_per_s": 46.47707619713493,
+        "tokens": 5,
+        "elapsed_s": 1.0700345420045778,
+        "reply": "Answer: NEGATIVE"
+      },
+      {
+        "id": "ner",
+        "cat": "nlp",
+        "ok": true,
+        "first_token_s": 0.927531708002789,
+        "tokens_per_s": 33.11910555999268,
+        "tokens": 768,
+        "elapsed_s": 24.11656804199447,
+        "reply": "Answer: Ada Lovelace, Charles Babbage\n\nThe names mentioned are Ada Lovelace and Charles Babbage. Both names appear once in the statement provided.\n\nAnswer: Ada Lovelace and Charles Babbage\n\nThe names mentioned are Ada Lovelace, who is associated with working on the Analytical Engine and Charles Babbage, who was a pioneer of computers in England. Both names appear once in the statement provided.\n\nAnswer: Ada Lovelace and Charles Babbage\n\nThe names mentioned are Ada Lovelace, who worked on the Analytical Engine in London and Charles Babbage, a pioneer of computers in England. Both names appear once in the statement provided.\n\nAnswer: Ada Lovelace and Charles Babbage\n\nThe names mentioned are Ada Lovelace, who worked on the Analytical Engine in London and Charles Babbage, a pioneer of computers in England. Both names appear once in the statement provided.\n\nAnswer: Ada Lovelace and Charles Babbage\n\nThe names mentioned are Ada Lovelace, who worked on the Analytical Engine in London and Charles Babbage, a pioneer of computers in England. Both names appear once in the statement provided.\n\nAnswer: Ada Lovelace and Charles Babbage\n\nThe names mentioned are Ada Lovelace, who worked on the Analytical Engine in London and Charles Babbage, a pioneer of computers in England. Both names appear once in the statement provided.\n\nAnswer: Ada Lovelace and Charles Babbage\n\nThe names mentioned are Ada Lovelace, who worked on the Analytical Engine in London and Charles Babbage, a pioneer of computers in England. Both names appear once in the statement provided.\n\nAnswer: Ada Lovelace and Charles Babbage\n\nThe names mentioned are Ada Lovelace, who worked on the Analytical Engine in London and Charles Babbage, a pioneer of computers in England. Both names appear once in the statement provided.\n\nAnswer: Ada Lovelace and Charles Babbage\n\nThe names mentioned are Ada Lovelace, who worked on the Analytical Engine in London and Charles Babbage, a pioneer of computers in England. Both names appear once in the statement provided.\n\nAnswer: Ada Lovelace and Charles Babbage\n\nThe names mentioned are Ada Lovelace, who worked on the Analytical Engine in London and Charles Babbage, a pioneer of computers in England. Both names appear once in the statement provided.\n\nAnswer: Ada Lovelace and Charles Babbage\n\nThe names mentioned are Ada Lovelace, who worked on the Analytical Engine in London and Charles Babbage, a pioneer of computers in England. Both names appear once in the statement provided.\n\nAnswer: Ada Lovelace and Charles Babbage\n\nThe names mentioned are Ada Lovelace, who worked on the Analytical Engine in London and Charles Babbage, a pioneer of computers in England. Both names appear once in the statement provided.\n\nAnswer: Ada Lovelace and Charles Babbage\n\nThe names mentioned are Ada Lovelace, who worked on the Analytical Engine in London and Charles Babbage, a pioneer of computers in England. Both names appear once in the statement provided.\n\nAnswer: Ada Lovelace and Charles Babbage\n\nThe names mentioned are Ada Lovelace, who worked on the Analytical Engine in London and Charles Babbage, a pioneer of computers in England. Both names appear once in the statement provided.\n\nAnswer: Ada Lovelace and Charles Babbage\n\nThe names mentioned are Ada Lovelace, who worked on the Analytical Engine in London and Charles Babbage, a pioneer of computers in England. Both names appear once in the statement provided.\n\nAnswer: Ada Lovelace and Charles Babbage\n\nThe names mentioned are"
+      }
+    ]
+  }
+]

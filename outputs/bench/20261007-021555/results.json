@@ -1,0 +1,11 @@
+[
+  {
+    "task": "image_gen",
+    "model": "stabilityai/sd-turbo",
+    "n": 10,
+    "clip_score": 34.81,
+    "steps": 2,
+    "s/image (median)": 2.37,
+    "device": "mps"
+  }
+]
